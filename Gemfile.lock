@@ -40,7 +40,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    anbt-sql-formatter (0.1.0)
     arel (8.0.0)
+    awesome_print (1.8.0)
     bindex (0.7.0)
     builder (3.2.3)
     byebug (11.0.1)
@@ -110,6 +112,10 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-flog (1.5.0)
+      anbt-sql-formatter (>= 0.0.7)
+      awesome_print
+      rails (>= 4.2.0)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.1.7)
@@ -184,6 +190,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
   rails (~> 5.1.7)
+  rails-flog
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
