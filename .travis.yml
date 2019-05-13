@@ -8,3 +8,11 @@ before_script:
 before_install:
 - gem update --system
 - gem install bundler
+deploy:
+ run: bin/rails db:migrate
+ provider: heroku
+ app: recipeeps
+ api_key:
+   secure: Fh2foHFZ+tFgY4npkc9NLC2OIm2Mo484dcpHnvLWdwKeazHz9u2+2fiRSH7nYmXnfEk7F/OO1uzQcSoibDWm7wLvChqGj51/w3Y2HmMIEDWU7/9Qrvg5OjpQG9S99CuRx4CVyhC5pyXHi/w6JvFnzKfGm++KIafclljIuhlKo+omgvGLGiPHP5XtUlO6x7Q14Hbf7JdVSvVYsOXepFsyGo7q3uj9yH3Q7m5CfsaBJodo0fgILdV7ANMt6BFNsQg9+mkXHoN8q+DK9V7y5OkJ1s4XqPkXje943pUKkFs3F1uvvda8mkaz9x8KLMV0hUTOiEL/8J6HN5d2zF2YDA22LQGYnwE/Vh6nMGZIgBnQ8Gcx+QW3qp5ITA3RQiEE+WkBocEl6mwjhJMlKh27XXRdciXkKzvN0k6T5wh0hDYbPm/O3gSLJ3bKm5bi9LrPPUg+usQ6uH5Y+MjNsbNNi0FFml/hR0Se+KqW5CVyLtPG/toyyQO8ckomQpil4h8vXCSdfHdcL9mzkG9HWKeJG0metBOC18KRmTphEEJ6f5ernXGiurM07SCluJuaipkPCnScSz0tNqvBke/m0MMdTbzMqjKjN2Wi0K+0AnRF1qvdx5ycbxigJHaqa8yXIUlcveyXu0maLUzfGJTuXvLg4ObCbQ73QyRlzHnb6BcMxQL7jxM=
+   on:
+   repo: harrygalliano/ReciPeeps
