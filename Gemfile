@@ -41,6 +41,8 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'rails-flog', :require => "flog"
+  gem 'rspec-rails'
+
 end
 
 group :development do
