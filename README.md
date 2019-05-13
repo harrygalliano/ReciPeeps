@@ -1,4 +1,5 @@
 # ReciPeeps
+[![Build Status](https://travis-ci.org/harrygalliano/ReciPeeps.svg?branch=master)](https://travis-ci.org/harrygalliano/ReciPeeps)
 
 > A social recipe platform where **Peeps** can upvote recipes that matter to them. 
 
