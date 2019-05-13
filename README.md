@@ -1,24 +1,41 @@
-# README
+# ReciPeeps
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A social recipe platform where **Peeps** can upvote recipes that matter to them. 
 
-Things you may want to cover:
+### We are blah;
 
-* Ruby version
+  - [Bart Biernat](https://github.com/fo0s)
+  - [Lauren Qurashi](https://github.com/LaurenQurashi)
+  - [Andrew McLelland](https://github.com/andrewmclelland23)
+  - [Harry Galliano](https://github.com/harrygalliano)
 
-* System dependencies
+Our site hosted on [Heroku](https://recipeeps.herokuapp.com/)  
 
-* Configuration
+Our Trello board: [Recipeeps](https://trello.com/b/Ib4NLdgT/recipeeps)
 
-* Database creation
+## Enough about you guys, how do I run ReciPeeps?
 
-* Database initialization
+Clone this repo  
+`git clone https://github.com/harrygalliano/ReciPeeps.git`
 
-* How to run the test suite
+Install gem requirements  
+`bundle install`
 
-* Services (job queues, cache servers, search engines, etc.)
+Set up you local database  
+<--- Database set up here
 
-* Deployment instructions
+Run a rails server  
+`rails s`
 
-* ...
+## I love your project! How can I contribute?
+
+We love you too! Please follow these simple steps;
+
+1. Follow the setup process above
+2. Create a branch on your local 
+3. Push changes to the branch
+4. Create a pull request
+
+An awesome member of our team (probably Andy) will review your suggestions.  
+Thank you in advance for your contribution.
+
