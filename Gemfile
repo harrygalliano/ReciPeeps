@@ -42,7 +42,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rails-flog', :require => "flog"
   gem 'rspec'
-  gem 'simplecov', require: false, group: :test
+  gem 'rspec-rails'
+  gem 'simplecov', require: false
   gem 'simplecov-console'
 
 end
