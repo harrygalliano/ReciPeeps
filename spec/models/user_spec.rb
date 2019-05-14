@@ -40,4 +40,10 @@ RSpec.describe User, type: :model do
    expect(user.valid?).to eq true;
  end
 
+ it 'Should reject a password less than 6 characters long' do
+   user = User.create( { name: 'Test', email: 'TEST@TESTMAIL.COM',
+     password: "p", password_confirmation: "p" } )
+   expect(user.valid?).to eq false;
+ end
+
 end
