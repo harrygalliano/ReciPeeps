@@ -22,13 +22,14 @@
       ],
       "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/models/user.rb": [
         1,
-        2,
+        3,
         1,
         1,
         1,
         null,
         null,
         null,
+        1,
         null
       ],
       "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/models/application_record.rb": [
@@ -59,6 +60,6 @@
         0
       ]
     },
-    "timestamp": 1557835942
+    "timestamp": 1557836605
   }
 }
