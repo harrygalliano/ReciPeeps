@@ -1,10 +1,24 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/models/recipe_spec.rb": [
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/controllers/recipes_controller_spec.rb": [
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         null
       ],
@@ -175,17 +189,60 @@
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/routes.rb": [
         1,
         null,
+        1,
         null
       ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/helpers/application_helper.rb": [
         1,
         null
       ],
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/helpers/recipes_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/recipes_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/features/create_recipe_card_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/models/recipe_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/recipe.rb": [
+        1,
         1,
         null
       ]
     },
-    "timestamp": 1557827689
+    "timestamp": 1557830868
   }
 }

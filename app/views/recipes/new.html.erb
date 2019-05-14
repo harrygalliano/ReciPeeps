@@ -1,0 +1,8 @@
+<h1>Create your recipe!</h1>
+
+
+<%= form_for @recipe, url: {action: "create"}, html: {class: "new-recipe-form"} do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area :description %>
+  <%= f.submit "Create" %>
+<% end %>
