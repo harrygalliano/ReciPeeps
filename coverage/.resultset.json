@@ -1,27 +1,41 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/models/user.rb": [
+        1,
+        null
+      ],
+      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/models/application_record.rb": [
-        0,
-        0,
-        0
-      ],
       "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/controllers/application_controller.rb": [
-        0,
-        0,
-        0
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/helpers/application_helper.rb": [
         0,
         0
       ],
@@ -38,6 +52,6 @@
         0
       ]
     },
-    "timestamp": 1557761461
+    "timestamp": 1557835053
   }
 }
