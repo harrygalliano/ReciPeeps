@@ -7,7 +7,13 @@ class RecipesController < ApplicationController
   def create
     name = params[:recipe][:name]
     description = params[:recipe][:description]
-    Recipe.create(name: name, description: description)
+    recipe = Recipe.create(name: name, description: description)
+    redirect_to "/ingredients/#{recipe.id}/new"
+  end
+
+  def show
+    id = params[:id]
+    @recipe = Recipe.find(id)
   end
 
 end

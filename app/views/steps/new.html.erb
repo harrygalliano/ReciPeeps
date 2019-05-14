@@ -1,0 +1,6 @@
+<h1>Add Method</h1>
+
+<%= form_for @step, url: {action: "create"}, html: {class: "new-step-form"} do |f| %>
+  <%= f.text_area :description %>
+  <%= f.submit "Add" %>
+<% end %>
