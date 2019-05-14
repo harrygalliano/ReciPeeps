@@ -11,7 +11,17 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   # Want a nice code coverage website? Uncomment this next line!
   # SimpleCov::Formatter::HTMLFormatter
 ])
-SimpleCov.start 'rails'
+
+SimpleCov.start do
+  'rails'
+  add_filter "app/channels/application_cable/connection.rb"
+  add_filter "app/controllers/application_controller.rb"
+  add_filter "app/channels/application_cable/channel.rb"
+  add_filter "app/jobs/application_job.rb"
+  add_filter "app/mailers/application_mailer.rb"
+  add_filter "app/models/application_record.rb"
+  add_filter "spec/rails_helper.rb"
+end
 
 RSpec.configure do |config|
 
