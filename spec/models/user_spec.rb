@@ -23,4 +23,9 @@ RSpec.describe User, type: :model do
    user = User.create( { name: 'T' * 21, email: 'test@testmail.com' } )
    expect(user.valid?).to eq false;
  end
+
+ it 'Should accept an email that is not lowercase' do
+   user = User.create( { name: 'Test', email: 'TEST@TESTMAIL.COM' } )
+   expect(user.valid?).to eq true;
+ end
 end
