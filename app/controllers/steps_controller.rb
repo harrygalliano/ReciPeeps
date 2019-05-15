@@ -5,9 +5,15 @@ def new
   end
 
   def create
-    description = params[:step][:description]
-    id = params[:id]
-    Step.create(description: description, recipe_id: id)
-    redirect_to "/recipes/#{id}"
+    add_steps(params[:id])
+    redirect_to "/recipes/#{params[:id]}"
+  end
+
+  def add_steps(id)
+    params.each do |param|
+      next if param.slice(0..5) != 'steps_'
+      hash = params[param]
+      Step.create(description: hash[:description], recipe_id: id)
+    end
   end
 end
