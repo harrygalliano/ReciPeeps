@@ -4,6 +4,12 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require 'coveralls'
+require 'selenium-webdriver'
+
+Capybara.javascript_driver = :selenium
+
+system('clear')
+
 Coveralls.wear!('rails')
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([

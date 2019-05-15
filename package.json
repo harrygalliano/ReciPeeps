@@ -11,8 +11,13 @@
     "test": "jest"
   },
   "jest": {
+    "verbose": true,
     "roots": [
       "spec/javascript"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "app/assets/javascripts"
     ]
   }
 }

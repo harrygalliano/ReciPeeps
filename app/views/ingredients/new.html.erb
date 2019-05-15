@@ -1,8 +1,10 @@
 <h1>Add Ingredients</h1>
 
 <%= form_for @ingredient, url: {action: "create"}, html: {class: "new-ingredient-form"} do |f| %>
-  <%= f.text_field :name %>
-  <%= f.number_field :value, :step => "0.5" %>
-  <%= f.text_field :unit %>
-  <%= f.submit "Add" %>
+ <div id='ingredient_1'></div>
+ <div id='ingredient_2'></div>
+ <div id='ingredient_3'></div>
+ <div id='ingredient_4'></div>
+ <div id='ingredient_5'></div>
+ <%= f.submit "Add" %>
 <% end %>
