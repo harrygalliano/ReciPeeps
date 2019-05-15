@@ -43,6 +43,7 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'coveralls', require: false
   gem 'geckodriver-helper'
+  gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   gem 'rails-controller-testing'
   gem 'rails-flog', :require => "flog"
