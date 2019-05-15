@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
-  resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'ingredients/:id/new', to: 'ingredients#new'
+  post 'ingredients/:id', to: 'ingredients#create'
+
+  get 'steps/:id/new', to: 'steps#new'
+  post 'steps/:id', to: 'steps#create'
+
+  resources :recipes, :users
 end
