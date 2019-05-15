@@ -3,8 +3,8 @@ require 'capybara/rspec'
 require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
-
-
+require 'coveralls'
+Coveralls.wear!('rails')
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::Console,
@@ -22,6 +22,11 @@ SimpleCov.start do
   add_filter "app/models/application_record.rb"
   add_filter "spec/rails_helper.rb"
 end
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+   Coveralls::SimpleCov::Formatter,
+   SimpleCov::Formatter::Console
+  ])
 
 RSpec.configure do |config|
 

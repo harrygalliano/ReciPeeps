@@ -1,7 +1,8 @@
 # ReciPeeps
 [![Build Status](https://travis-ci.org/harrygalliano/ReciPeeps.svg?branch=master)](https://travis-ci.org/harrygalliano/ReciPeeps)
+[![Coverage Status](https://coveralls.io/repos/github/harrygalliano/ReciPeeps/badge.svg?branch=master&kill_cache=1)](https://coveralls.io/repos/github/harrygalliano/ReciPeeps?branch=master&kill_cache=1)
 
-> A social recipe platform where **Peeps** can upvote recipes that matter to them. 
+> A social recipe platform where **Peeps** can upvote recipes that matter to them.
 
 ### We are blah;
 
@@ -40,10 +41,9 @@ Open up a new tab in your browser and connect to the url:
 We love you too! Please follow these simple steps;
 
 1. Follow the setup process above
-2. Create a branch on your local 
+2. Create a branch on your local
 3. Push changes to the branch
 4. Create a pull request
 
 An awesome member of our team (probably Andy) will review your suggestions.  
 Thank you in advance for your contribution.
-
