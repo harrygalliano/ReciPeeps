@@ -1,0 +1,31 @@
+<% provide(:title, 'Sign up') %>
+
+<div class="jumbotron bg-dark text-white">
+  <div class="container">
+    <h1 class="display-4">Sign up</h1>
+  </div>
+</div>
+
+
+<div class="container"
+  <center>
+  <div class="container">
+    <%= form_for(@user) do |f| %>
+    <div class ="row">
+      <%= f.text_field :name, placeholder: 'Name' %>
+    </div><br><br>
+    <div class ="row">
+      <%= f.email_field :email, placeholder: 'Email' %>
+    </div><br><br>
+    <div class ="row">
+      <%= f.password_field :password, placeholder: 'Password' %>
+    </div><br><br>
+
+    <div class ="row">
+      <%= f.password_field :password_confirmation, placeholder: '... And again pls' %>
+    </div><br><br>
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+    </center>
+  </div>
+</div>
