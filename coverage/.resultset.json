@@ -1,233 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/controllers/users_controller.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/models/user.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/controllers/ingredients_controller_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/environment.rb": [
-        null,
-        1,
-        null,
-        null,
-        1
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/application.rb": [
-        1,
-        null,
-        1,
-
-        null,
-        null,
-        null,
-        1,
-
-        1,
-        null
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/jobs/application_job.rb": [
-        0,
-        0
-
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/environments/test.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/initializers/application_controller_renderer.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/initializers/assets.rb": [
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/initializers/backtrace_silencers.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/initializers/cookies_serializer.rb": [
-        null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/initializers/filter_parameter_logging.rb": [
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/initializers/inflections.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/initializers/mime_types.rb": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/initializers/wrap_parameters.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/config/routes.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/helpers/application_helper.rb": [
         1,
         null
@@ -244,41 +17,31 @@
         1,
         null
       ],
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/helpers/users_helper.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/ingredients_controller.rb": [
         1,
         null,
         1,
-        3,
+        4,
         null,
         null,
         1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/controllers/recipes_controller_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
         null,
         null
       ],
@@ -303,95 +66,52 @@
         null,
         null
       ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/controllers/steps_controller_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null
-      ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/steps_controller.rb": [
         1,
         null,
         1,
+        3,
+        null,
+        null,
+        1,
+        3,
+        3,
+        3,
+        3,
+        null,
+        null
+      ],
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        3,
+        3,
         2,
         null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/features/create_recipe_card_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         1,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
+        null,
         1,
         null,
         1,
-        1,
-        1,
-        1,
-        1,
+        3,
         null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/models/ingredient_spec.rb": [
-        1,
-        null,
-        1,
         null,
         null
       ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/ingredient.rb": [
         1,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/models/recipe_spec.rb": [
         1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
         null
       ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/recipe.rb": [
@@ -399,20 +119,25 @@
         1,
         null
       ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/spec/models/step_spec.rb": [
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/step.rb": [
         1,
-        null,
         1,
-        null,
         null
       ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/step.rb": [
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/user.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
         1,
         null
       ]
     },
-
-    "timestamp": 1557844416
-
+    "timestamp": 1557924870
   }
 }
