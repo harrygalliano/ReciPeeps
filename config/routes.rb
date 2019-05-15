@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: 'users#new'
+
   get '/ingredients/:id/new', to: 'ingredients#new'
   post '/ingredients/:id', to: 'ingredients#create'
 
