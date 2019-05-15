@@ -23,10 +23,17 @@ Install gem requirements
 `bundle install`
 
 Set up you local database  
-<--- Database set up here
+`bin/rails db:create`  
+`bin/rails db:migrate`  
+
+Run rspec to see if it works  
+`bundle exec rspec`
 
 Run a rails server  
-`rails s`
+`bin/rails server`  
+
+Open up a new tab in your browser and connect to the url:  
+`http://localhost:3000`
 
 ## I love your project! How can I contribute?
 
