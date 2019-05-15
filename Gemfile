@@ -42,8 +42,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'coveralls', require: false
-  gem 'geckodriver-helper'
-  gem 'chromedriver-helper'
+  gem 'webdrivers'
   gem 'selenium-webdriver'
   gem 'rails-controller-testing'
   gem 'rails-flog', :require => "flog"
