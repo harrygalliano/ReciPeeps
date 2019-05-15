@@ -17,8 +17,7 @@
 !/log/.keep
 !/tmp/.keep
 
-/coverage/.resultset.json
-/coverage/.resultset.json.lock
+/coverage/.resultset*
 
 /node_modules
 /yarn-error.log
