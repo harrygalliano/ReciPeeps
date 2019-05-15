@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome to Recipeeps!"
-      redirect_to @user
+      render 'show'
     else
       render 'new'
     end
@@ -24,4 +24,4 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
-end 
+end

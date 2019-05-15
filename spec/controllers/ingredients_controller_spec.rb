@@ -2,18 +2,30 @@ require 'rails_helper'
 
 RSpec.describe IngredientsController, type: :controller do
 
-  xdescribe "GET #new" do
+  before(:each) do
+    @recipe = Recipe.create(name: 'Lasagne', description: 'Tastes real nice')
+  end
+
+  describe "GET #new" do
     it "returns http success" do
-      get :new
+      get :new, params: { id: @recipe.id }
       expect(response).to have_http_status(:success)
     end
   end
 
-  xdescribe "POST #create" do
+  describe "POST #create" do
     it "adds an ingredient to ingredients database" do
-      post :create, :params => { ingredient: { :ingredient1 => "Test ingredient", :value1 => 3.0, :unit1 => "test" } }
+      post :create, params: { id: @recipe.id, ingredient: { name: "Test ingredient", value: 3.0, unit: "test" } }
       expect(Ingredient.find_by(name: 'Test ingredient')).to_not eq nil
     end
+    it "redirects to method page" do
+      expect(
+        post :create, params: {
+          id: @recipe.id, ingredient: {
+            name: "Test ingredient", value: 3.0, unit: "test"
+            }
+          }
+      ).to redirect_to("/steps/#{@recipe.id}/new")
+    end
   end
-
 end
