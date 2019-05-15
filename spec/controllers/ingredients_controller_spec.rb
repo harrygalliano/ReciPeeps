@@ -14,9 +14,17 @@ RSpec.describe IngredientsController, type: :controller do
   end
 
   describe "POST #create" do
-    it "adds an ingredient to ingredients database" do
-      post :create, params: { id: @recipe.id, ingredients_1: { name: "Test ingredient", value: 3.0, unit: "test" } }
+    it "adds an ingredient to ingredients table" do
+      post :create, params: { id: @recipe.id,
+        ingredients_1: { name: "Test ingredient", value: 3.0, unit: "test" } }
       expect(Ingredient.find_by(name: 'Test ingredient')).to_not eq nil
+    end
+    it "adds multiple ingredients to ingredients table" do
+      post :create, params: { id: @recipe.id,
+        ingredients_1: { name: "Test ingredient 1", value: 3.0, unit: "test" },
+        ingredients_2: { name: "Test ingredient 2", value: 3.0, unit: "test" } }
+      expect(Ingredient.find_by(name: 'Test ingredient 1')).to_not eq nil
+      expect(Ingredient.find_by(name: 'Test ingredient 2')).to_not eq nil
     end
     it "redirects to method page" do
       expect(
