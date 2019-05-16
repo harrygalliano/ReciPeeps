@@ -17,4 +17,23 @@ feature 'Create recipe card with multiple steps' do
     click_button 'Submit'
     expect(page).to have_content 'Test recipe name'
   end
+
+  scenario 'I can remove steps to a recipe I have started to make', js: true do
+    visit '/recipes/new'
+    fill_in 'recipe_name', with: 'Test recipe name'
+    fill_in 'recipe_description', with: 'Test recipe description'
+    click_button 'Create'
+
+    click_button 'Submit'
+
+    click_button 'More Steps'
+    click_button 'More Steps'
+
+    fill_in 'steps_1[description]', with: 'test description 1'
+    fill_in 'steps_2[description]', with: 'test description 2'
+    fill_in 'steps_3[description]', with: 'test description 3'
+    click_button 'Less Steps '
+    expect{ page.find(:css, "#steps_2_description") }.to_not raise_error Capybara::ElementNotFound
+    expect{ page.find(:css, "#steps_3_description") }.to raise_error Capybara::ElementNotFound
+  end
 end
