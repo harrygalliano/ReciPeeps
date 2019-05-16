@@ -5,11 +5,16 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    name = params[:ingredient][:name]
-    unit = params[:ingredient][:unit]
-    value = params[:ingredient][:value]
-    id = params[:id]
-    Ingredient.create(name: name, unit: unit, value: value, recipe_id: id)
-    redirect_to "/steps/#{id}/new"
+    recipe_id = params[:id] 
+    add_ingredients(recipe_id)
+    redirect_to "/steps/#{recipe_id}/new"
+  end
+
+  def add_ingredients(id)
+    params.each do |param|
+      next if param.slice(0..11) != 'ingredients_'
+      hash = params[param]
+      Ingredient.create(name: hash[:name], unit: hash[:unit], value: hash[:value], recipe_id: id)
+    end
   end
 end

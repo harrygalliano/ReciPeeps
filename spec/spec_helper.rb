@@ -4,6 +4,22 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 require 'coveralls'
+require 'selenium-webdriver'
+
+Capybara.register_driver :headless_chrome do |app|
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+    chromeOptions: { 'args' => %w{headless disable-gpu} }
+  )
+  profile = Selenium::WebDriver::Firefox::Profile.new
+  client = Selenium::WebDriver::Remote::Http::Default.new
+  client.timeout = 120 # instead of the default 60
+  Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
+end
+
+Capybara.javascript_driver = :headless_chrome
+
+system('clear')
+
 Coveralls.wear!('rails')
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
