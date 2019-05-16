@@ -14,6 +14,12 @@ class RecipesController < ApplicationController
   def show
     id = params[:id]
     @recipe = Recipe.find(id)
+    @ingredients = Ingredient.where(recipe_id: id)
+    @steps = Step.where(recipe_id: id)
+  end
+
+  def index
+    @recipes = Recipe.all
   end
 
 end

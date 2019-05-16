@@ -1,6 +1,29 @@
 <h1>Add Method</h1>
 
 <%= form_for @step, url: {action: "create"}, html: {class: "new-step-form"} do |f| %>
-  <%= f.text_area :description %>
-  <%= f.submit "Add" %>
+  <div id='step_1'></div>
+  <div id='step_2'></div>
+  <div id='step_3'></div>
+  <div id='step_4'></div>
+  <div id='step_5'></div>
+  <div id='step_6'></div>
+  <div id='step_7'></div>
+  <div id='step_8'></div>
+  <div id='step_9'></div>
+  <div id='step_10'></div>
+  <div id='step_11'></div>
+  <div id='step_12'></div>
+  <div id='step_13'></div>
+  <div id='step_14'></div>
+  <div id='step_15'></div>
+  <div id='step_16'></div>
+  <div id='step_17'></div>
+  <div id='step_18'></div>
+  <div id='step_19'></div>
+  <div id='step_20'></div>
+  <%= f.submit "Submit" %>
 <% end %>
+
+<form action="index.html" method="post" id='add_step_form'>
+  <input type="button" id="add_step_button" value="More Steps">
+</form>
