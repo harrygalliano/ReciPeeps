@@ -13,4 +13,10 @@ $(".steps.new").ready(function() {
     counter += 1
     document.getElementById(`step_${counter}`).innerHTML = step_input_builder(counter)
   });
+
+  document.getElementById('remove_step_button').addEventListener("click", function(event){
+    event.preventDefault()
+    document.getElementById(`step_${counter}`).innerHTML = ''
+    counter -= 1
+  });
 });
