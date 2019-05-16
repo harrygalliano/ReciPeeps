@@ -25,7 +25,7 @@ RSpec.describe UsersController, type: :controller do
         }
       ).to render_template('users/new')
     end
-    it "renders users show page if sign up succesful" do
+    it "redirects to log in page if sign up succesful" do
       expect(
         post :create, params: {
           user: { name: 'test',
@@ -34,7 +34,7 @@ RSpec.describe UsersController, type: :controller do
                   password_confirmation: '123456'
                 }
         }
-      ).to render_template('users/show')
+      ).to redirect_to('/login')
     end
   end
 end

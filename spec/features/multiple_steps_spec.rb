@@ -1,5 +1,10 @@
 feature 'Create recipe card with multiple steps' do
 
+  before(:each) do
+    sign_up
+    log_in
+  end
+
   scenario 'I can add multiple steps to a recipe I have started to make', js: true do
     visit '/recipes/new'
     fill_in 'recipe_name', with: 'Test recipe name'

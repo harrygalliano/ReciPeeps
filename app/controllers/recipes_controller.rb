@@ -5,9 +5,10 @@ class RecipesController < ApplicationController
   end
 
   def create
+    id = current_user.id
     name = params[:recipe][:name]
     description = params[:recipe][:description]
-    recipe = Recipe.create(name: name, description: description)
+    recipe = Recipe.create(name: name, description: description, user_id: id)
     redirect_to "/ingredients/#{recipe.id}/new"
   end
 

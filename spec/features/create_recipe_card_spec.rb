@@ -1,5 +1,9 @@
 feature 'Create recipe card' do
 
+  before(:each) do
+    sign_up
+    log_in
+  end
 
   scenario 'I can begin creating a recipe by inputting a name and description' do
     visit '/recipes/new'

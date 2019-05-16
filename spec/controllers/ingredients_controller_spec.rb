@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe IngredientsController, type: :controller do
 
   before(:each) do
-    @recipe = Recipe.create(name: 'Lasagne', description: 'Tastes real nice')
+    @user = User.create(name: 'test', email: 'test@test.com', password: '123456', password_confirmation: '123456')
+    @recipe = Recipe.create(name: 'Lasagne', description: 'Tastes real nice', user_id: @user.id)
   end
 
   describe "GET #new" do
