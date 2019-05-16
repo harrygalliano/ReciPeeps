@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
+
   get '/ingredients/:id/new', to: 'ingredients#new'
   post '/ingredients/:id', to: 'ingredients#create'
 
