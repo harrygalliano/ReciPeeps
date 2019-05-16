@@ -37,7 +37,7 @@ feature 'Create recipe card with multiple ingredients' do
     fill_in 'ingredients_3[value]', with: 3
     fill_in 'ingredients_3[unit]', with: 'g'
     click_button 'Less Ingredients '
-    click_button 'Submit'
-    expect(page).to have_content 'Add Method'
+    expect{ page.find(:css, "#ingredients_2_name") }.to_not raise_error Capybara::ElementNotFound
+    expect{ page.find(:css, "#ingredients_3_name") }.to raise_error Capybara::ElementNotFound
   end
 end
