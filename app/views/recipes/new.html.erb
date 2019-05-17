@@ -1,3 +1,11 @@
+<% if flash[:danger] %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+       <%= flash[:danger] %>
+    </div>
+</div>
+<% end %>
+
 <h1>Create your recipe!</h1>
 
 

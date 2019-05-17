@@ -1,11 +1,16 @@
 feature 'New Recipe Page' do
 
+  before(:each) do
+    sign_up
+    log_in
+  end
+
   scenario 'checks that the user enters a recipe description' do
-    visit '/recipies/new'
-    fill_in 'recipies_name', with: ''
-    fill_in 'recipies_description', with: ''
+    visit '/recipes/new'
+    fill_in 'recipe_name', with: 'Test recipe name'
+    fill_in 'recipe_description', with: ''
     click_button 'Create'
-    expect(page).to have_content 'Cannot submit empty field'
+    expect(page).to have_content 'Cannot submit empty field.'
   end
 
 
