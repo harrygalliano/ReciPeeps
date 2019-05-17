@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/controllers/ingredients_controller.rb": [
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/ingredients_controller.rb": [
         1,
         null,
         1,
@@ -23,7 +23,7 @@
         null,
         null
       ],
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/controllers/recipes_controller.rb": [
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/recipes_controller.rb": [
         1,
         null,
         1,
@@ -51,8 +51,7 @@
         null,
         null
       ],
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/controllers/sessions_controller.rb": [
-        1,
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/sessions_controller.rb": [
         1,
         null,
         1,
@@ -72,11 +71,15 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        0,
         null,
         null,
         null
       ],
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/controllers/steps_controller.rb": [
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/steps_controller.rb": [
         1,
         null,
         1,
@@ -97,8 +100,7 @@
         null,
         null
       ],
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/controllers/users_controller.rb": [
-        1,
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/users_controller.rb": [
         1,
         null,
         1,
@@ -127,22 +129,22 @@
         null,
         null
       ],
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/models/ingredient.rb": [
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/ingredient.rb": [
         1,
         1,
         null
       ],
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/models/recipe.rb": [
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/recipe.rb": [
         1,
         1,
         null
       ],
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/models/step.rb": [
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/step.rb": [
         1,
         1,
         null
       ],
-      "/Users/harrygalliano/makers-work/ReciPeeps/app/models/user.rb": [
+      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/user.rb": [
         1,
         null,
         1,
@@ -156,6 +158,6 @@
         null
       ]
     },
-    "timestamp": 1558021129
+    "timestamp": 1558084082
   }
 }

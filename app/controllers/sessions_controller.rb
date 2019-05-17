@@ -20,4 +20,8 @@ class SessionsController < ApplicationController
     redirect_to '/login'
   end
 
+  def find_user
+    userUser.find_by[]
+  end
+
 end
