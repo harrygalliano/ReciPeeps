@@ -1,5 +1,10 @@
 feature 'see recipes displayed on index' do
 
+  before(:each) do
+    sign_up
+    log_in
+  end
+
   scenario 'I see all recipes when I visit index', js: true do
     visit '/recipes/new'
     fill_in 'recipe_name', with: 'Test recipe name'
