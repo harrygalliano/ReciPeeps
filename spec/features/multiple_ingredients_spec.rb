@@ -4,7 +4,7 @@ feature 'Create recipe card with multiple ingredients' do
     sign_up
     log_in
   end
-  
+
   scenario 'I can add multiple ingredients to a recipe I have started to make', js: true do
     visit '/recipes/new'
     fill_in 'recipe_name', with: 'Test recipe name'
@@ -42,7 +42,7 @@ feature 'Create recipe card with multiple ingredients' do
     fill_in 'ingredients_3[value]', with: 3
     fill_in 'ingredients_3[unit]', with: 'g'
     click_button 'Less Ingredients '
-    expect{ page.find(:css, "#ingredients_2_name") }.to_not raise_error Capybara::ElementNotFound
-    expect{ page.find(:css, "#ingredients_3_name") }.to raise_error Capybara::ElementNotFound
+    expect{ page.find(:css, "#ingredients_2_name") }.to_not raise_error(Capybara::ElementNotFound,  'Unable to find css "#ingredients_2_name"')
+    expect{ page.find(:css, "#ingredients_3_name") }.to raise_error(Capybara::ElementNotFound, 'Unable to find css "#ingredients_3_name"')
   end
 end

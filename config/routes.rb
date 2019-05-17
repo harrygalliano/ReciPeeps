@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: 'recipes#index'
+
   get 'sessions/new'
 
   get '/ingredients/:id/new', to: 'ingredients#new'

@@ -39,15 +39,13 @@ RSpec.describe RecipesController, type: :controller do
     it "does not create a recipe if user is not logged in" do
       session.delete(:user_id)
       expect(Recipe).to_not receive(:create)
-      # post :create, :params => { recipe: { :name => "Test recipe", :description => "Test description" } }
+      post :create, :params => { recipe: { :name => "Test recipe", :description => "Test description" } }
     end
 
-    it "refreshes page if recipe didn't save" do
-      expect{ Recipe.create(name: 'Test', description: '', user_id: @user.id)}.to raise_error
+    it "creates a flash error if recipe field is empty" do
+      post :create, :params => { recipe: { :name => "", :description => "Test description" } }
+      expect(flash[:danger]).to match(/Cannot submit empty field./)
     end
 
-    it "does not raise error if recipe creation was sucessful" do
-      expect{ Recipe.create(name: 'Test', description: 'Test Description', user_id: @user.id)}.not_to raise_error
-    end
   end
 end
