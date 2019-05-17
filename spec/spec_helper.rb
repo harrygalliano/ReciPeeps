@@ -23,12 +23,6 @@ system('clear')
 
 Coveralls.wear!('rails')
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-  SimpleCov::Formatter::Console,
-  # Want a nice code coverage website? Uncomment this next line!
-  # SimpleCov::Formatter::HTMLFormatter
-])
-
 SimpleCov.start do
   'rails'
   add_filter "app/channels/application_cable/connection.rb"
@@ -45,6 +39,8 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
    Coveralls::SimpleCov::Formatter,
    SimpleCov::Formatter::Console
   ])
+
+RSpec::Expectations.configuration.on_potential_false_positives = :nothing
 
 RSpec.configure do |config|
 

@@ -11,9 +11,7 @@ def new
 
   def add_steps(id)
     params.each do |param|
-      next if param.slice(0..5) != 'steps_'
-      hash = params[param]
-      Step.create(description: hash[:description], recipe_id: id)
+      Step.create(description: param[1]['description'], recipe_id: id)
     end
   end
 end
