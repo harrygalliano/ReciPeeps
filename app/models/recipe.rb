@@ -1,3 +1,3 @@
 class Recipe < ApplicationRecord
-  validates :name, :description, presence: true
+  validates :name, :description, :user_id, presence: true
 end

@@ -17,4 +17,10 @@ $(".ingredients.new").ready(function() {
     counter += 1
     document.getElementById(`ingredient_${counter}`).innerHTML = ingredient_input_builder(counter)
   });
+
+  document.getElementById('remove_ingredient_button').addEventListener("click", function(event){
+    event.preventDefault()
+    document.getElementById(`ingredient_${counter}`).innerHTML = ''
+    counter -= 1
+  });
 });
