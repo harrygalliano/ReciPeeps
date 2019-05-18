@@ -10,14 +10,8 @@
         null,
         1,
         12,
-        null,
-        null,
-        null,
-        null,
-        null,
         12,
         12,
-        null,
         null,
         null,
         1,
@@ -26,12 +20,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        0,
         null,
         null,
         null
@@ -105,11 +93,7 @@
         1,
         9,
         9,
-        0,
-        null,
         9,
-        9,
-        null,
         null,
         null,
         1,
@@ -178,7 +162,7 @@
         null
       ]
     },
-    "timestamp": 1558194848
+    "timestamp": 1558197941
   },
   "(4/4)": {
     "coverage": {

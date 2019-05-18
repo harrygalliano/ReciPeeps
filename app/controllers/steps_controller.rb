@@ -6,12 +6,8 @@ class StepsController < ApplicationController
 
   def create
     steps = params[:id]
-    if steps.empty?
-      flash[:danger] = 'Cannot submit empty field.'
-    else
-      add_steps(steps)
-      redirect_to "/recipes/#{params[:id]}"
-    end
+    add_steps(steps)
+    redirect_to "/recipes/#{params[:id]}"
   end
 
   def add_steps(id)
