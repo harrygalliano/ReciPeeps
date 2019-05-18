@@ -24,6 +24,13 @@
         </div>
       </header>
   </head>
+  <% if flash[:danger] %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        <%= flash[:danger] %>
+      </div>
+    </div>
+  <% end %>
 
   <body class="<%= controller_name %> <%= action_name %>">
     <%= yield %>

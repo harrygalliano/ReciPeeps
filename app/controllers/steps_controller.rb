@@ -1,12 +1,17 @@
 class StepsController < ApplicationController
 
-def new
+  def new
     @step = Step.new
   end
 
   def create
-    add_steps(params[:id])
-    redirect_to "/recipes/#{params[:id]}"
+    steps = params[:id]
+    if steps.empty?
+      flash[:danger] = 'Cannot submit empty field.'
+    else
+      add_steps(steps)
+      redirect_to "/recipes/#{params[:id]}"
+    end
   end
 
   def add_steps(id)

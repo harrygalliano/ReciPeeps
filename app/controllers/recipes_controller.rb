@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
     id = current_user.id
     name = params[:recipe][:name]
     description = params[:recipe][:description]
+
     if name.empty? || description.empty?
       flash[:danger] = 'Cannot submit empty field.'
       redirect_to "/recipes/new"
@@ -15,6 +16,7 @@ class RecipesController < ApplicationController
       recipe = Recipe.create(name: name, description: description, user_id: id)
       redirect_to "/ingredients/#{recipe.id}/new"
     end
+
   end
 
   def show

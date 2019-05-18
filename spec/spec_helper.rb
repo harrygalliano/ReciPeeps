@@ -13,7 +13,7 @@ Capybara.register_driver :headless_chrome do |app|
   )
   profile = Selenium::WebDriver::Firefox::Profile.new
   client = Selenium::WebDriver::Remote::Http::Default.new
-  client.timeout = 120 # instead of the default 60
+  client.read_timeout = 120 # instead of the default 60
   Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
 end
 
