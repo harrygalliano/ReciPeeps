@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  skip_before_action :require_login, only: [:index, :show]
 
   def new
     @recipe = Recipe.new

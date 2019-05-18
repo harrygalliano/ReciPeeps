@@ -19,9 +19,4 @@ class SessionsController < ApplicationController
     log_out
     redirect_to '/login'
   end
-
-  def find_user
-    userUser.find_by[]
-  end
-
 end
