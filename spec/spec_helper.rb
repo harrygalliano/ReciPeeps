@@ -6,6 +6,7 @@ require 'simplecov-console'
 require 'coveralls'
 require 'selenium-webdriver'
 require_relative 'web_helpers/user_helpers.rb'
+require_relative 'web_helpers/recipe_helpers.rb'
 
 Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
