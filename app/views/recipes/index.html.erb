@@ -9,14 +9,14 @@
         <a href="#"><i class="fa fa-heart-o"></i></a>
         </div>
     </div>
-    <div class="text">
-        <h1 class="food">
-          <a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a>
+    <div class="recipe-card-title">
+        <h1 class="recipe-card-title-container">
+          <a><%= recipe.name %></a>
         </h1>
         <i class="fa fa-clock-o"> 15 Mins</i>
         <i class="fa fa-users"> Serves 2</i>
         
-        <div class="stars">
+        <div class="recipe-card-rating">
           <li>
               <a href="#"><i class="fa fa-star"></i></a>
               <a href="#"><i class="fa fa-star"></i></a>
@@ -25,9 +25,9 @@
               <a href="#"><i class="fa fa-star-o"></i></a>
           </li>
         </div>
-        <p class="info"><%= recipe.description %></p>
+        <p class="recipe-card-description"><%= recipe.description %></p>
     </div>
-    <a href="#" class="btn">Let's Cook!</a>
+    <a href="/recipes/<%= recipe.id %>" class="recipe-card-cook-btn">Let's Cook!</a>
   </div>
 
 
