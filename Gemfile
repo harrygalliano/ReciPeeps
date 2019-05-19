@@ -25,7 +25,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
 gem 'webpacker'
+
+gem 'will_paginate', "~> 3.1.1" 
 
 group :development, :test do
   # Adds support for Capybara system testing and selenium driver
