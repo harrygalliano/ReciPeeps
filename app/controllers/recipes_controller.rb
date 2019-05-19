@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  skip_before_action :require_login, only: [:index, :show]
 
   def new
     @recipe = Recipe.new
@@ -21,6 +22,7 @@ class RecipesController < ApplicationController
 
   def show
     id = params[:id]
+    @comments = Comment.where(recipe_id: id)
     @recipe = Recipe.find(id)
     @ingredients = Ingredient.where(recipe_id: id)
     @steps = Step.where(recipe_id: id)

@@ -13,13 +13,13 @@
           <%= link_to "Logo-goes-here", root_path, id: "logo" %>
           <nav>
             <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Home", root_path, id: 'home_nav' %></li>
               <% if logged_in? %>
-                <li><%= link_to "Log out", logout_path, method: :delete %></li>
-                <li><%= link_to "Profile", users_path %></li>
-                <li><%= link_to "New recipe", recipes_path, method: :new %></li>
+                <li><%= link_to "Log out", logout_path, id: 'log_out_nav', method: :delete %></li>
+                <li><%= link_to "Profile", '/users/find', id: 'profile_nav' %></li>
+                <li><%= link_to "New recipe", '/recipes/new', id: 'new_recipe_nav', method: :get %></li>
               <% else %>
-                <li><%= link_to "Log in", login_path %></li>
+                <li><%= link_to "Log in", '/login', id: 'log_in_nav' %></li>
               <% end %>
             </ul>
           </nav>
