@@ -1,11 +1,3 @@
-<% if flash[:danger] %>
-  <div id="error_explanation">
-    <div class="alert alert-danger">
-       <%= flash[:danger] %>
-    </div>
-</div>
-<% end %>
-
 <h1>Add Ingredients</h1>
 
 <%= form_for @ingredient, url: {action: "create"}, html: {class: "new-ingredient-form"} do |f| %>

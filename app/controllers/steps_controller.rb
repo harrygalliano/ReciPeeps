@@ -5,8 +5,7 @@ class StepsController < ApplicationController
   end
 
   def create
-    steps = params[:id]
-    add_steps(steps)
+    add_steps(params[:id])
     redirect_to "/recipes/#{params[:id]}"
   end
 

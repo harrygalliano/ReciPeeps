@@ -1,5 +1,13 @@
 <% provide(:title, "Log in") %>
 
+<% if flash[:danger] %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+       <%= flash[:danger] %>.
+    </div>
+</div>
+<% end %>
+
 <h1>Log in</h1>
 
 <div class="row">
