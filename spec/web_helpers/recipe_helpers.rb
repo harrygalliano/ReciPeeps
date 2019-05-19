@@ -9,5 +9,4 @@ def create_recipe
   click_button 'Submit'
   fill_in 'steps_1[description]', with: 'test description'
   click_button 'Submit'
-  click_link 'Log out'
 end
