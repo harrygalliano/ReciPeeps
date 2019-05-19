@@ -1,26 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/ingredients_controller.rb": [
-=======
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/comments_controller.rb": [
+        1,
+        1,
+        4,
+        null,
+        4,
+        null,
+        null
+      ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/ingredients_controller.rb": [
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
         1,
         null,
         1,
-        12,
+        16,
         null,
         null,
         1,
-        12,
-        12,
-        12,
+        15,
+        15,
+        15,
         null,
         null,
         1,
-        12,
-        68,
+        15,
+        86,
         null,
         null,
         null,
@@ -28,67 +33,42 @@
         null,
         null
       ],
-<<<<<<< HEAD
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/recipes_controller.rb": [
-        1,
-        null,
-        1,
-        15,
-        null,
-        null,
-        1,
-        14,
-        14,
-        14,
-        null,
-        14,
-        2,
-        2,
-        null,
-        12,
-        12,
-        null,
-        null,
-=======
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/recipes_controller.rb": [
         1,
         1,
         null,
         1,
-        14,
+        20,
         null,
         null,
         1,
-        12,
-        12,
-        12,
-        12,
-        12,
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
+        18,
+        18,
+        18,
         null,
+        18,
+        2,
+        2,
         null,
-        1,
-        7,
-        7,
-        7,
-        7,
+        16,
+        16,
+        null,
         null,
         null,
         1,
-<<<<<<< HEAD
-        3,
-=======
-        9,
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
+        13,
+        13,
+        13,
+        13,
+        13,
         null,
+        null,
+        1,
+        11,
         null,
         null
       ],
-<<<<<<< HEAD
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/sessions_controller.rb": [
-=======
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/sessions_controller.rb": [
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
         1,
         1,
         null,
@@ -96,78 +76,62 @@
         null,
         null,
         1,
-<<<<<<< HEAD
-        17,
-        17,
-        13,
-        13,
+        25,
+        25,
+        22,
+        22,
         null,
-        4,
-        4,
-=======
-        18,
-        18,
-        17,
-        17,
-        null,
-        1,
-        1,
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
+        3,
+        3,
         null,
         null,
         null,
         1,
-<<<<<<< HEAD
-        1,
-        1,
-        null,
-        null
-      ],
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/steps_controller.rb": [
-=======
         2,
         2,
         null,
         null
       ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/steps_controller.rb": [
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
         1,
         null,
         1,
-        10,
+        13,
         null,
         null,
         1,
-        9,
-        9,
-        null,
-        null,
-        1,
-        9,
-        50,
-        null,
-        null,
-        null
-      ],
-<<<<<<< HEAD
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/controllers/users_controller.rb": [
-        1,
-        1,
-        null,
-        1,
+        11,
         11,
         null,
         null,
         1,
-        19,
+        11,
+        62,
         null,
+        null,
+        null
+      ],
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/users_controller.rb": [
+        1,
+        1,
         null,
         1,
         21,
-        21,
-        15,
-        15,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        31,
+        null,
+        null,
+        1,
+        32,
+        32,
+        26,
+        26,
         null,
         6,
         null,
@@ -176,27 +140,32 @@
         1,
         null,
         1,
-        21,
+        32,
         null,
         null,
         null
       ],
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/ingredient.rb": [
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/comment.rb": [
         1,
         1,
         null
       ],
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/recipe.rb": [
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/ingredient.rb": [
         1,
         1,
         null
       ],
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/step.rb": [
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/recipe.rb": [
         1,
         1,
         null
       ],
-      "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/user.rb": [
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/step.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/user.rb": [
         1,
         null,
         1,
@@ -210,7 +179,7 @@
         null
       ]
     },
-    "timestamp": 1558254908
+    "timestamp": 1558263181
   },
   "(4/4)": {
     "coverage": {
@@ -492,36 +461,10 @@
         null,
         3,
         3,
-=======
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/users_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        16,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        24,
-        null,
-        null,
-        1,
-        25,
-        25,
-        19,
-        19,
-        null,
-        6,
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
         null,
         null,
         null,
         1,
-<<<<<<< HEAD
         0,
         0,
         null,
@@ -662,26 +605,10 @@
         null
       ],
       "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/recipe.rb": [
-=======
-        null,
-        1,
-        25,
-        null,
-        null,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/ingredient.rb": [
         1,
         1,
         null
       ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/recipe.rb": [
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
-        1,
-        1,
-        null
-      ],
-<<<<<<< HEAD
       "/home/random/Dropbox/Code/Ruby/Makers/ReciPeeps/app/models/user.rb": [
         1,
         null,
@@ -777,17 +704,6 @@
         1,
         0,
         null,
-=======
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/step.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/user.rb": [
-        1,
-        null,
-        1,
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
         1,
         1,
         null,
@@ -795,7 +711,6 @@
         null,
         1,
         1,
-<<<<<<< HEAD
         7,
         null,
         null,
@@ -989,11 +904,5 @@
       ]
     },
     "timestamp": 1558195080
-=======
-        null
-      ]
-    },
-    "timestamp": 1558204294
->>>>>>> 6c1e0d10cd0995dfc29322167051cdbe1d8fcf99
   }
 }

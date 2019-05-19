@@ -17,7 +17,6 @@ class RecipesController < ApplicationController
       recipe = Recipe.create(name: name, description: description, user_id: id)
       redirect_to "/ingredients/#{recipe.id}/new"
     end
-
   end
 
   def show
@@ -31,5 +30,4 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
   end
-
 end
