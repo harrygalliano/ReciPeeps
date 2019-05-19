@@ -2,8 +2,40 @@
 
 <% @recipes.each do |recipe| %>
   <div id="recipe_<%= recipe.id %>" class="recipe">
-    <h3><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></h3>
-    <p><%= recipe.description %></p>
+
+  <div class="recipe-card">
+    <div class="recipe-card-header">
+        <div class="recipe-card-icon">
+        <a href="#"><i class="fa fa-heart-o"></i></a>
+        </div>
+    </div>
+    <div class="text">
+        <h1 class="food">
+          <a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a>
+        </h1>
+        <i class="fa fa-clock-o"> 15 Mins</i>
+        <i class="fa fa-users"> Serves 2</i>
+        
+        <div class="stars">
+          <li>
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-star"></i></a>
+              <a href="#"><i class="fa fa-star-o"></i></a>
+          </li>
+        </div>
+        <p class="info"><%= recipe.description %></p>
+    </div>
+    <a href="#" class="btn">Let's Cook!</a>
+  </div>
+
+
+
+
+
+
+
   </div>
 <% end %>
 
