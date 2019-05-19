@@ -37,4 +37,12 @@ RSpec.describe UsersController, type: :controller do
       ).to redirect_to('/login')
     end
   end
+
+  describe "GET #find" do
+    it "redirects to show page for logged in user" do
+      user = User.create(name: 'test', email: 'test@test.com', password: '123456', password_confirmation: '123456')
+      session[:user_id] = user.id
+      expect(get :find).to redirect_to "/users/#{user.id}"
+    end
+  end
 end

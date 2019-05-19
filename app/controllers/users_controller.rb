@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def find
+    redirect_to "/users/#{current_user.id}"
+  end
+
   def new
     @user = User.new
   end
