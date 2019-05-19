@@ -16,6 +16,7 @@ class RecipesController < ApplicationController
       redirect_to "/recipes/new"
     else
       recipe = Recipe.create(name: name, description: description, user_id: id)
+      recipe.image.attach(image)
       redirect_to "/ingredients/#{recipe.id}/new"
     end
   end
@@ -26,7 +27,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(id)
     @ingredients = Ingredient.where(recipe_id: id)
     @steps = Step.where(recipe_id: id)
-    @image = Image.where(recipe_id: id)
   end
 
   def index
