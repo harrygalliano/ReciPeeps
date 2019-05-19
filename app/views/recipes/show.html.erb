@@ -1,6 +1,14 @@
 <h1><%= @recipe.name %></h1>
 <p><%= @recipe.description %></p>
 
+<% if @recipe.image.attached? %>
+  <p>
+    <strong>Image:</strong>
+    <br>
+    <%= image_tag @recipe.image %>
+  </p>
+<% end %>
+
 <h2>Ingredients</h2>
 <ul>
 <% @ingredients.each do |ingredient| %>

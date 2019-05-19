@@ -9,6 +9,7 @@ class RecipesController < ApplicationController
     id = current_user.id
     name = params[:recipe][:name]
     description = params[:recipe][:description]
+    image = params[:recipe][:image]
 
     if name.empty? || description.empty?
       flash[:danger] = 'Cannot submit empty field.'
@@ -25,6 +26,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(id)
     @ingredients = Ingredient.where(recipe_id: id)
     @steps = Step.where(recipe_id: id)
+    @image = Image.where(recipe_id: id)
   end
 
   def index
