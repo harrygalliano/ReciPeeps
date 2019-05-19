@@ -1,6 +1,6 @@
 class StepsController < ApplicationController
 
-def new
+  def new
     @step = Step.new
   end
 

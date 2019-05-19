@@ -13,11 +13,3 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-//= require jquery
-//= require tether
-//= require jquery_ujs
-//= require bootstrap
-//= require bootstrap-sprockets
-//= require turbolinks
-//= require_tree
-//= require jquery-ui

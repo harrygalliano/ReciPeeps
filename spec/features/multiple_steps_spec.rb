@@ -29,6 +29,9 @@ feature 'Create recipe card with multiple steps' do
     fill_in 'recipe_description', with: 'Test recipe description'
     click_button 'Create'
 
+    fill_in 'ingredients_1[name]', with: 'test name'
+    fill_in 'ingredients_1[value]', with: 1
+    fill_in 'ingredients_1[unit]', with: 'g'
     click_button 'Submit'
 
     click_button 'More Steps'

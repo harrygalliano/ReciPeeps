@@ -41,5 +41,11 @@ RSpec.describe RecipesController, type: :controller do
       expect(Recipe).to_not receive(:create)
       post :create, :params => { recipe: { :name => "Test recipe", :description => "Test description" } }
     end
+
+    it "creates a flash error if recipe field is empty" do
+      post :create, :params => { recipe: { :name => "", :description => "Test description" } }
+      expect(flash[:danger]).to match(/Cannot submit empty field./)
+    end
+
   end
 end

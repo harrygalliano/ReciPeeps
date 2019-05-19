@@ -1,6 +1,25 @@
+  <% if flash[:danger] %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        <%= flash[:danger] %>
+      </div>
+    </div>
+  <% end %>
+
 <h1>Recipes</h1>
 
 <% @recipes.each do |recipe| %>
-  <h3><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></h3>
-  <p><%= recipe.description %></p>
+  <div id="recipe_<%= recipe.id %>" class="recipe">
+    <h3><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></h3>
+    <p><%= recipe.description %></p>
+  </div>
 <% end %>
+
+<div class="pagination_box">
+  <div class="pagination_info">
+    <%= page_entries_info @recipes %>
+  </div>
+  <div class="pagination_links">
+    <%= will_paginate @recipes, :container => false, link_separator: ' - ' %>
+  </div>
+</div>
