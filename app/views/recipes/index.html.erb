@@ -14,12 +14,10 @@
 
       <div class="recipe-card">
         <div class="recipe-card-header">
-            <div class="recipe-card-icon">
               <% if recipe.image.attached? %>
-                <%= image_tag recipe.image, class: "recipe_image_index" %>
+                <%= image_tag recipe.image, class: "recipe_image_index", :size => "400x350" %>
               <% end %>
               <a href="#"><i class="fas fa-heart"></i></a>
-            </div>
         </div>
         <div class="recipe-card-title">
             <h1 class="recipe-card-title-container">
