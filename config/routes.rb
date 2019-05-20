@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post '/comments', to: 'comments#create'
 
   root to: 'recipes#index'
+  post '/recipes/filter', to: 'recipes#filter'
 
   get '/users/find', to: 'users#find'
 

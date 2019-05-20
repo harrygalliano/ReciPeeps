@@ -17,11 +17,11 @@
           </div>
 
           <div class="navbar-center">
-            <form class="form-inline my-2 my-lg-2">
-              <input class="form-control w-100 mr-sm-2" type="search" placeholder="Search for recipe" aria-label="Search">
-            </form>
+            <%= form_tag '/recipes/filter', id: 'search_bar', class: "form-inline my-2 my-lg-2" do %>
+              <%= search_field_tag :search_bar_input, "", class: "form-control w-100 mr-sm-2", placeholder: 'Search by ingredient' %>
+              <%= submit_tag "Search" %>
+            <% end %>
           </div>
-
 
           <div class="navbar-right">
             <% if logged_in? %>
