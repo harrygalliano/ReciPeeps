@@ -9,7 +9,7 @@ class LikesController < ApplicationController
     else
       @recipe.likes.create(user_id: current_user.id)
     end
-    redirect_to recipe_path(@recipe)
+    redirect_to '/'
   end
 
   def destroy
@@ -18,7 +18,7 @@ class LikesController < ApplicationController
     else
       @like.destroy
     end
-    redirect_to recipe_path(@recipe)
+    redirect_to '/'
   end
 
   private
@@ -34,6 +34,6 @@ class LikesController < ApplicationController
 
   def find_like
    @like = @recipe.likes.find(params[:id])
-end
+ end
 
 end
