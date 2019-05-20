@@ -56,7 +56,13 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
     builder (3.2.3)
+<<<<<<< HEAD
     capybara (3.19.1)
+=======
+
+    capybara (3.20.2)
+
+>>>>>>> 2748362df4b5218df04b80ca0cb8a6e20b334607
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -85,11 +91,20 @@ GEM
     docile (1.3.1)
     erubi (1.8.0)
     execjs (2.7.0)
+<<<<<<< HEAD
     ffi (1.10.0)
+=======
+
+    ffi (1.11.0)
+>>>>>>> 2748362df4b5218df04b80ca0cb8a6e20b334607
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     font-awesome-sass (5.8.1)
       sassc (>= 1.11)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2748362df4b5218df04b80ca0cb8a6e20b334607
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hirb (0.7.3)
