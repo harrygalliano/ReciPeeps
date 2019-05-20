@@ -13,19 +13,26 @@
  *= require_tree .
  *= require_self
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
 @import "font-awesome";
 
 body {
-  margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: Raleway, sans-serif;
   list-style-type: none;
   text-decoration: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.navbar {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 1em 2em;
+  color: #525252;
+  min-width: 380px;
 }
 
 .recipe-card {
