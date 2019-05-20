@@ -19,6 +19,7 @@
                 <%= image_tag recipe.image, class: "recipe_image_index" %>
               <% end %>
               <a href="#"><i class="fas fa-heart"></i></a>
+              <p><%= recipe.likes.count %> <%= (recipe.likes.count) == 1 ? 'Like' : 'Likes'%></p>
             </div>
         </div>
         <div class="recipe-card-title">
@@ -27,7 +28,7 @@
             </h1>
             <i class="fa fa-clock-o"> 15 Mins</i>
             <i class="fa fa-users"> Serves 2</i>
-            
+
             <div class="recipe-card-rating">
               <li>
                   <a href="#"><i class="fas fa-star"></i></a>

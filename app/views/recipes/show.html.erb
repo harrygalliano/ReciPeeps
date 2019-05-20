@@ -21,6 +21,14 @@
 <% end %>
 </ol>
 
+<p><%= @recipe.likes.count %> <%= (@recipe.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+<% pre_like = @recipe.likes.find { |like| like.user_id == current_user.id} %>
+<% if pre_like %>
+  <%= button_to 'Unlike', recipe_like_path(@recipe, pre_like), method: :delete %>
+<% else %>
+  <%= button_to 'Like', recipe_likes_path(@recipe), method: :post %>
+<% end %>
+
 <h3>Comments</h3>
 <%= form_tag '/comments', method: 'post', class: "new-comment-form" do %>
   <%= hidden_field_tag :recipe_id, @recipe.id %>
