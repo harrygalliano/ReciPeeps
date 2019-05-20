@@ -29,6 +29,7 @@ gem 'font-awesome-rails'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem 'webpacker'
 gem 'jquery-ui-rails'
+gem "aws-sdk-s3", require: false
 
 gem 'will_paginate', "~> 3.1.1" 
 
