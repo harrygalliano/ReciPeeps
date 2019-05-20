@@ -24,8 +24,13 @@ gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.5'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.8.1'
 gem 'webpacker'
+gem 'jquery-ui-rails'
+
+gem 'will_paginate', "~> 3.1.1" 
 
 group :development, :test do
   # Adds support for Capybara system testing and selenium driver

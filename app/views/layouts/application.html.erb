@@ -4,29 +4,39 @@
     <title>ReciPeeps</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <%# Navigation bar %>
-      <header class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-          <%= link_to "Logo-goes-here", root_path, id: "logo" %>
-          <nav>
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Home", root_path, id: 'home_nav' %></li>
-              <% if logged_in? %>
-                <li><%= link_to "Log out", logout_path, id: 'log_out_nav', method: :delete %></li>
-                <li><%= link_to "Profile", '/users/find', id: 'profile_nav' %></li>
-                <li><%= link_to "New recipe", '/recipes/new', id: 'new_recipe_nav', method: :get %></li>
-              <% else %>
-                <li><%= link_to "Log in", '/login', id: 'log_in_nav' %></li>
-              <% end %>
-            </ul>
-          </nav>
+      <header class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+
+          <div class="nav navbar-nav navbar-left">
+            <li><%= link_to "Home", root_path, id: 'home_nav' %></li>
+          </div>
+
+          <div class="navbar-center">
+            <form class="form-inline my-2 my-lg-2">
+              <input class="form-control w-100 mr-sm-2" type="search" placeholder="Search for recipe" aria-label="Search">
+            </form>
+          </div>
+
+
+          <div class="navbar-right">
+            <% if logged_in? %>
+              <span class="border-bottom p-3"><%= link_to "Profile", '/users/find', id: 'profile_nav' %></span>
+              <span class="border-bottom p-3"><%= link_to "New recipe", '/recipes/new', id: 'new_recipe_nav', method: :get %></span>
+              <span class="border-bottom p-3"><%= link_to "Log out", logout_path, id: 'log_out_nav', method: :delete %></span>
+            <% else %>
+              <span class="border-bottom p-2"><%= link_to "Log in", '/login', id: 'log_in_nav' %></span>
+            <% end %>
+
+          </div>
         </div>
       </header>
-    <%# End of navigation bar %>
 
+      <%# End of navigation bar %>
   </head>
 
   <%# Danger warning message %>

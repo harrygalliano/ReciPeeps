@@ -13,3 +13,102 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+body {
+  padding: 0;
+  font-family: Raleway, sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.navbar {
+
+  font-size: 2em;
+  font-weight: 300;
+  margin: 1em 2em;
+  color: #525252;
+  min-width: 380px;
+}
+
+.recipe-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.recipe-card {
+  position: relative;
+  background: #fff;
+  width: 400px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 20px 5px rgb(163, 163, 163);
+}
+
+.recipe-card-header {
+  background: url("http://img.taste.com.au/UZVXAdo7/taste/2016/11/chinese-egg-noodle-and-vegetable-stir-fry-94186-1.jpeg");
+  background-size: cover;
+  min-height: 350px;
+}
+
+.fa-heart {
+  position: absolute;
+  left: 85%;
+  bottom: 30.7%;
+  background: #17bebb;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.fa-heart:hover {
+  background: #21fffb;
+  box-shadow: 0px 5px 30px 1px #17bebb;
+  transition: 250ms;
+}
+
+.recipe-card-title {
+  color: #212129;
+  text-align: left;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  margin: 5px 30px;
+}
+
+.fa-clock-o {
+  color: #9b9b9b;
+  margin: 0 30px;
+}
+
+.fa-users {
+  color: #9b9b9b;
+}
+
+.recipe-card-rating {
+  margin: 10px 30px;
+  color: #ffe500;
+}
+
+.recipe-card-description {
+  margin: 10px 30px;
+}
+
+.recipe-card-cook-btn {
+  display: block;
+  background: #ef3e36;
+  color: #fff;
+  position: relative;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 10px;
+  transition: 250ms;
+}
+.recipe-card-cook-btn:hover {
+  background: #17bebb;
+  transition: 250ms;
+}
+
