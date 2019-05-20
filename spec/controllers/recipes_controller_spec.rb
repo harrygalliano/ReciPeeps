@@ -47,5 +47,12 @@ RSpec.describe RecipesController, type: :controller do
       expect(flash[:danger]).to match(/Cannot submit empty field./)
     end
 
+    it 'attaches an uploaded file to a recipe' do
+      file = fixture_file_upload(Rails.root.join('public', 'apple-touch-icon.png'), 'image/png')
+      expect {
+  		post :create, :params => { recipe: { :name => "Test recipe",
+        :description => "Test description", image: file } } }
+        .to change(ActiveStorage::Attachment, :count).by(1)
+    end
   end
 end
