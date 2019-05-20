@@ -27,6 +27,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'webpacker'
+gem 'jquery-ui-rails'
 
 gem 'will_paginate', "~> 3.1.1" 
 
