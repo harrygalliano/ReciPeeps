@@ -4,6 +4,7 @@ class LikesController < ApplicationController
   def create
     @recipe = find_recipe
 
+
     if already_liked?
       flash[:notice] = "You can't like more than once"
     else
