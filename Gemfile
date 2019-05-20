@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'font-awesome-rails'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem 'webpacker'
+gem 'jquery-ui-rails'
 
 gem 'will_paginate', "~> 3.1.1" 
 
