@@ -8,7 +8,7 @@ feature 'Add comments to recipes' do
 
   scenario 'Logged in user can add comments to recipes', js: true do
     visit '/recipes'
-    click_link 'Test recipe name'
+    click_link "Let's Cook!"
     fill_in 'comment', with: 'Test comment'
     click_button 'Submit'
     expect(page).to have_content 'Test recipe name'
@@ -17,7 +17,7 @@ feature 'Add comments to recipes' do
 
   scenario 'Commenter name is displayed with comment', js: true do
     visit '/recipes'
-    click_link 'Test recipe name'
+    click_link "Let's Cook!"
     fill_in 'comment', with: 'Test comment'
     click_button 'Submit'
     expect(page).to have_content 'Test Name'

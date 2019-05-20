@@ -31,7 +31,7 @@ feature 'see recipes displayed on index' do
   scenario 'Recipes are links', js: true do
     create_recipe
     visit '/recipes'
-    click_link 'Test recipe name'
+    click_link "Let's Cook!"
     expect(page).to have_content 'ingredient name'
   end
 
