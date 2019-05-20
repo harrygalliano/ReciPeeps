@@ -8,12 +8,40 @@
 
 <h1>Recipes</h1>
 
-<% @recipes.each do |recipe| %>
-  <div id="recipe_<%= recipe.id %>" class="recipe">
-    <h3><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></h3>
-    <p><%= recipe.description %></p>
-  </div>
-<% end %>
+
+<div class="recipe-card-container">
+  <% @recipes.each do |recipe| %>
+    <div id="recipe_<%= recipe.id %>" class="recipe">
+
+      <div class="recipe-card">
+        <div class="recipe-card-header">
+            <div class="recipe-card-icon">
+            <a href="#"><i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+        <div class="recipe-card-title">
+            <h1 class="recipe-card-title-container">
+              <a><%= recipe.name %></a>
+            </h1>
+            <i class="fa fa-clock-o"> 15 Mins</i>
+            <i class="fa fa-users"> Serves 2</i>
+            
+            <div class="recipe-card-rating">
+              <li>
+                  <a href="#"><i class="fas fa-star"></i></a>
+                  <a href="#"><i class="fas fa-star"></i></a>
+                  <a href="#"><i class="fas fa-star"></i></a>
+                  <a href="#"><i class="fas fa-star"></i></a>
+                  <a href="#"><i class="far fa-star"></i></a>
+              </li>
+            </div>
+          <p class="recipe-card-description"><%= recipe.description %></p>
+        </div>
+        <a href="/recipes/<%= recipe.id %>" class="recipe-card-cook-btn">Let's Cook!</a>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <div class="pagination_box">
   <div class="pagination_info">
