@@ -19,7 +19,7 @@ def create_recipe_2
   fill_in "recipe_description", with: "Test recipe description 2"
   click_button "Create"
   fill_in "ingredients_1[name]", with: "ingredient name 2"
-  fill_in "ingredients_1[value]", with: 100
+  fill_in "ingredients_1[value]", with: 200
   fill_in "ingredients_1[unit]", with: "ml"
   click_button "Submit"
   fill_in "steps_1[description]", with: "test description 2"
