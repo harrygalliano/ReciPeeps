@@ -17,9 +17,11 @@ feature 'Filtering by ingredient' do
       click_button 'Submit'
       fill_in 'steps_1[description]', with: 'test description'
       click_button 'Submit'
+      expect(page).to have_content 'Pasta Bake'
       visit '/'
       fill_in 'search_bar_input', with: 'pasta'
-      click_button 'Search'
+      find('.search-button').set("pasta\n")
+      # click_on 'Search'
       expect(page).to have_content 'Displaying 1 Recipe'
       expect(page).to have_content 'Pasta Bake'
   end
