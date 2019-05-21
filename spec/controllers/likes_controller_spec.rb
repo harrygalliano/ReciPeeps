@@ -1,6 +1,6 @@
-require 'rails_helper'
+# frozen_string_literal: true
 
-RSpec.describe LikesController, type: :controller do
+require "rails_helper"
 
   before(:each) do
     @user = User.create(name: 'test', email: 'test@test.com', password: '123456', password_confirmation: '123456')
@@ -31,5 +31,6 @@ RSpec.describe LikesController, type: :controller do
     end
 
   end
+
 
 end
