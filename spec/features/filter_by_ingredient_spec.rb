@@ -1,11 +1,11 @@
-feature 'Filtering by ingredient' do
+feature 'Filtering by ingredient', js: true do
 
   before(:each) do
       sign_up
       log_in
   end
 
-  scenario 'I can filter by ingredient', js: true do
+  scenario 'I can filter by ingredient' do
       create_recipe
       visit '/recipes/new'
       fill_in 'recipe_name', with: 'Pasta Bake'
@@ -17,19 +17,17 @@ feature 'Filtering by ingredient' do
       click_button 'Submit'
       fill_in 'steps_1[description]', with: 'test description'
       click_button 'Submit'
-      expect(page).to have_content 'Pasta Bake'
       visit '/'
       fill_in 'search_bar_input', with: 'pasta'
       find('.search-button').set("pasta\n")
-      # click_on 'Search'
       expect(page).to have_content 'Displaying 1 Recipe'
       expect(page).to have_content 'Pasta Bake'
   end
-  scenario 'I can see which filter is currently being applied', js: true do
+  scenario 'I can see which filter is currently being applied' do
       create_recipe
       visit '/'
       fill_in 'search_bar_input', with: 'pasta'
-      click_button 'Search'
+      find('.search-button').set("pasta\n")
       expect(page).to have_content 'Filtered by ingredient: pasta'
   end
 end
