@@ -14,9 +14,8 @@
 
       <div class="recipe-card">
         <div class="recipe-card-header">
-            <div class="recipe-card-icon">
               <% if recipe.image.attached? %>
-                <%= image_tag recipe.image, class: "recipe_image_index" %>
+                <%= image_tag recipe.image, class: "recipe_image_index", :size => "400x350" %>
               <% end %>
 
               <% pre_like = recipe.likes.find { |like| like.user_id == current_user.id} %>

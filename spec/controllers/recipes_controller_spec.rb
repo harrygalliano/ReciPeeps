@@ -55,4 +55,25 @@ RSpec.describe RecipesController, type: :controller do
         .to change(ActiveStorage::Attachment, :count).by(1)
     end
   end
+
+  describe "POST #filter" do
+    it "filters and finds recipes that have a specific ingredient" do
+      recipe1 = Recipe.create(name: 'Lasagne', description: 'Tasty dish', user_id: @user.id)
+      recipe2 = Recipe.create(name: 'Lasagne 2', description: 'Tasty dish 2', user_id: @user.id)
+      recipe3 = Recipe.create(name: 'Lasagne 3', description: 'Tasty dish 3', user_id: @user.id)
+      Ingredient.create(name: 'Caviar', value: 2, unit: 'units', recipe_id: recipe1.id)
+      Ingredient.create(name: 'Caviar', value: 2, unit: 'units', recipe_id: recipe2.id)
+      Ingredient.create(name: 'Cheese', value: 200, unit: 'grams', recipe_id: recipe3.id)
+      post :filter, params: { :search_bar_input => 'Caviar' }
+      expect(assigns(:recipes).count).to eq 2
+    end
+    it "filter is not case sensitive" do
+      recipe1 = Recipe.create(name: 'Lasagne', description: 'Tasty dish', user_id: @user.id)
+      recipe2 = Recipe.create(name: 'Lasagne 2', description: 'Tasty dish 2', user_id: @user.id)
+      Ingredient.create(name: 'Caviar', value: 2, unit: 'units', recipe_id: recipe1.id)
+      Ingredient.create(name: 'cAvIaR', value: 2, unit: 'units', recipe_id: recipe2.id)
+      post :filter, params: { :search_bar_input => 'caviar' }
+      expect(assigns(:recipes).count).to eq 2
+    end
+  end
 end
