@@ -1,5 +1,6 @@
 <h1><%= @recipe.name %></h1>
 <p><%= @recipe.description %></p>
+<p><a id="user_filter_link" href="/recipes/<%= User.find(@recipe.user_id).id %>/filter"><%= User.find(@recipe.user_id).name %></a> </p>
 
 <% if @recipe.image.attached? %>
   <div class="recipe_image_container">

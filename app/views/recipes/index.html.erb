@@ -17,7 +17,7 @@
               <% if recipe.image.attached? %>
                 <%= image_tag recipe.image, class: "recipe_image_index", :size => "400x350" %>
               <% end %>
-              
+
               <% pre_like = recipe.likes.find { |like| like.user_id == current_user.id} %>
               <% if pre_like %>
 
@@ -31,6 +31,7 @@
             <h1 class="recipe-card-title-container">
               <a><%= recipe.name %></a>
             </h1>
+            <i class="fa"> <a href="/recipes/<%= User.find(recipe.user_id).id %>/filter"><%= User.find(recipe.user_id).name %></a> </i>
             <i class="fa fa-clock-o"> 15 Mins</i>
             <i class="fa fa-users"> Serves 2</i>
 
