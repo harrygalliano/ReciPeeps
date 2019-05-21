@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   skip_before_action :require_login
 
@@ -9,13 +11,13 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to user
     else
-      flash[:danger] = 'Invalid email/password combination'
-      redirect_to '/login'
+      flash[:danger] = "Invalid email/password combination"
+      redirect_to "/login"
     end
   end
 
   def destroy
     log_out
-    redirect_to '/login'
+    redirect_to "/login"
   end
 end

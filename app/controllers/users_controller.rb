@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
 
@@ -19,7 +21,7 @@ class UsersController < ApplicationController
       flash[:success] = 'Welcome to Recipeeps!'
       redirect_to '/login'
     else
-      render 'new'
+      render "new"
     end
   end
 
