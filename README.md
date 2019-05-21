@@ -13,8 +13,6 @@
 
 Our site hosted on [Heroku](https://recipeeps.herokuapp.com/)  
 
-Our Trello board: [Recipeeps](https://trello.com/b/Ib4NLdgT/recipeeps)
-
 ## Enough about you guys, how do I run ReciPeeps?
 
 Clone this repo  

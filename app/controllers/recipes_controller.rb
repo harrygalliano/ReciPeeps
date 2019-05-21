@@ -23,6 +23,16 @@ class RecipesController < ApplicationController
     end
   end
 
+  def filter
+    search_term = params[:search_bar_input].downcase
+    ingredients = Ingredient.where("lower(name) = ?", search_term)
+    recipe_ids = ingredients.map do |ingredient|
+      ingredient.recipe_id
+    end
+    @recipes = Recipe.where(id: recipe_ids).paginate(page: params[:page], per_page: 10)
+    render 'index'
+  end
+
   def show
     id = params[:id]
     @comments = Comment.where(recipe_id: id)
