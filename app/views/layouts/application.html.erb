@@ -39,16 +39,6 @@
       <%# End of navigation bar %>
   </head>
 
-  <%# Danger warning message %>
-  <% if flash[:danger] %>
-    <div id="error_explanation">
-      <div class="alert alert-danger">
-        <%= flash[:danger] %>
-      </div>
-    </div>
-  <% end %>
-  <%# End of danger warning message %>
-
   <body class="<%= controller_name %> <%= action_name %>">
     <%= yield %>
   </body>
