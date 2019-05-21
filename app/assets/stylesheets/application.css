@@ -138,3 +138,7 @@ body {
   background: #17bebb;
   transition: 250ms;
 }
+
+.login-container {
+  margin-left: 30%;
+}

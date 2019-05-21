@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   post '/comments', to: 'comments#create'
 
   root to: 'recipes#index'
