@@ -1,6 +1,13 @@
 <h1><%= @recipe.name %></h1>
 <p><%= @recipe.description %></p>
 
+<% pre_favourite = @recipe.favourites.find { |favourite| favourite.user_id == current_user.id} %>
+<% if pre_favourite %>
+  <%= button_to 'Unfavourite', recipe_favourite_path(@recipe, pre_favourite), method: :delete %>
+<% else %>
+  <%= button_to 'Favourite', recipe_favourites_path(@recipe), method: :post %>
+<% end %>
+
 <% if @recipe.image.attached? %>
   <div class="recipe_image_container">
     <%= image_tag @recipe.image, class: "recipe_image_show", height: '150' %>

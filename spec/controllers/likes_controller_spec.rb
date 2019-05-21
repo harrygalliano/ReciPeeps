@@ -16,12 +16,12 @@ RSpec.describe LikesController, type: :controller do
     end
 
 
-   it "redirects to the index page if like was successful" do
+   it "refreshes page if like was successful" do
       expect(
         post :create, params: {recipe_id: @recipe.id}
       ).to redirect_to('/')
     end
-    
+
   end
 
 
