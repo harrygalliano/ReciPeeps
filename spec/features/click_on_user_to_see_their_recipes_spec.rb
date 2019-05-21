@@ -38,7 +38,7 @@ feature 'See a users recipes', js: true   do
         create_recipe_2
         visit '/'
         first('.recipe').click_link("Let's Cook!")
-        click_link 'Test Name'
+        find('#user_filter_link').click
         expect(page).to have_content 'Displaying 1 Recipe'
         expect(page).to have_content 'Test Name'
   end
