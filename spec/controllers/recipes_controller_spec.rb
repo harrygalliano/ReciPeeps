@@ -77,4 +77,15 @@ RSpec.describe RecipesController, type: :controller do
       expect(assigns(:recipes).count).to eq 2
     end
   end
+
+  describe "GET #user_filter" do
+    it "filters and finds recipes that have a specific ingredient" do
+      user2 = User.create(name: "test2", email: "test2@test.com", password: "123456", password_confirmation: "123456")
+      recipe1 = Recipe.create(name: 'Lasagne', description: 'Tasty dish', user_id: @user.id)
+      recipe2 = Recipe.create(name: 'Lasagne 2', description: 'Tasty dish 2', user_id: @user.id)
+      recipe3 = Recipe.create(name: 'Lasagne 3', description: 'Tasty dish 3', user_id: user2.id)
+      get :user_filter, params: { :user_id => @user.id }
+      expect(assigns(:recipes).count).to eq 2
+    end
+  end
 end

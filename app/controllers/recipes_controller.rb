@@ -33,6 +33,11 @@ class RecipesController < ApplicationController
     render 'index'
   end
 
+  def user_filter
+    @recipes = Recipe.where(user_id: params[:user_id]).paginate(page: params[:page], per_page: 10)
+    render 'index'
+  end
+
   def show
     id = params[:id]
     @comments = Comment.where(recipe_id: id)
