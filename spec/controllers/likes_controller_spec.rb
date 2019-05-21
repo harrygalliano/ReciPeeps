@@ -17,18 +17,17 @@ RSpec.describe LikesController, type: :controller do
 
 
     it "redirects to the index page if like was successful" do
-      expect(
-        post :create, params: {recipe_id: @recipe.id}
-      ).to redirect_to('/')
+      expect(post :create, params: {recipe_id: @recipe.id}).to redirect_to('/')
     end
   end
 
   describe "POST #destroy" do
 
     it "deletes a like from the database" do
-      post :create, params: {recipe_id: @recipe.id}
-      post :destroy, params: {recipe_id: @recipe.id}
-      expect(Like.find_by(recipe_id: @recipe.id )).to eq nil
+    post :create, params: {recipe_id: @recipe.id}
+    like = Like.find_by(recipe_id: @recipe.id)
+    delete :destroy, params: {recipe_id: @recipe.id, id: like.id}
+    expect(Like.find_by(recipe_id: @recipe.id )).to eq nil
     end
 
   end
