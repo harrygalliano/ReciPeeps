@@ -1,5 +1,6 @@
-class IngredientsController < ApplicationController
+# frozen_string_literal: true
 
+class IngredientsController < ApplicationController
   def new
     @ingredient = Ingredient.new
   end
@@ -12,10 +13,10 @@ class IngredientsController < ApplicationController
 
   def add_ingredients(id)
     params.each do |param|
-      Ingredient.create(name: param[1]['name'],
-        unit: param[1]['unit'],
-        value: param[1]['value'],
-        recipe_id: id)
+      Ingredient.create(name: param[1]["name"],
+                        unit: param[1]["unit"],
+                        value: param[1]["value"],
+                        recipe_id: id)
     end
   end
 end

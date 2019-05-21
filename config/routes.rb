@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   post '/comments', to: 'comments#create'
 
   root to: 'recipes#index'
@@ -19,5 +18,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  resources :recipes, :users
+  resources :users
+  resources :recipes do
+    resources :likes
+  end
 end

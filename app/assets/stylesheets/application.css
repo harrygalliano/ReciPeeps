@@ -51,21 +51,49 @@ body {
   min-height: 350px;
 }
 
-.fa-heart {
-  position: absolute;
-  left: 85%;
-  bottom: 30.7%;
+.recipe-card-liked-button {
+  padding: 15px;
+  border-radius: 50%;
+  border: none;
   background: #17bebb;
+  position: absolute;
+  left: 85.5%;
+  bottom: 30.7%;
+  transition: 400ms;
+}
+
+.recipe-card-unliked-button {
+  padding: 15px;
+  border-radius: 50%;
+  border: none;
+  background: #0b6435;
+  position: absolute;
+  left: 85.5%;
+  bottom: 30.7%;
+  transition: 400ms;
+}
+
+.fa-heart {
   color: #fff;
   font-size: 2em;
   font-weight: bold;
-  padding: 15px;
-  border-radius: 50%;
 }
 
-.fa-heart:hover {
+.fa-heart-broken {
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.recipe-card-liked-button:hover {
   background: #21fffb;
   box-shadow: 0px 5px 30px 1px #17bebb;
+  transition: 250ms;
+}
+
+.recipe-card-unliked-button:hover {
+  background: #0d7e41;
+  box-shadow: 0px 5px 30px 1px #008136;
   transition: 250ms;
 }
 
@@ -114,5 +142,4 @@ body {
   background-color: rgba(255, 255, 255, 0.794);
   border: none;
   height: 2px;
-
 }
