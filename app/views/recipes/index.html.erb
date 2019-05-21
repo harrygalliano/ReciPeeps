@@ -31,6 +31,7 @@
             <h1 class="recipe-card-title-container">
               <a><%= recipe.name %></a>
             </h1>
+            <i class="fa"> <a href="/recipes/<%= User.find(recipe.user_id).id %>/filter"><%= User.find(recipe.user_id).name %></a> </i>
             <i class="fa fa-clock-o"> 15 Mins</i>
             <i class="fa fa-users"> Serves 2</i>
 
@@ -47,7 +48,6 @@
         </div>
         <a href="/recipes/<%= recipe.id %>" class="recipe-card-cook-btn">Let's Cook!</a>
       </div>
-    </div>
   <% end %>
 </div>
 

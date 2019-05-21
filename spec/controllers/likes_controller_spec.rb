@@ -8,33 +8,25 @@ RSpec.describe LikesController, type: :controller do
     session[:user_id] = @user.id
   end
 
- describe "POST #create" do
-
-   it "adds a like to the database" do
+  describe "POST #create" do
+    it "adds a like to the database" do
       post :create, params: {recipe_id: @recipe.id}
       expect(Like.find_by(recipe_id: @recipe.id )).to_not eq nil
     end
-
-
-   it "refreshes page if like was successful" do
+    it "refreshes page if like was successful" do
       expect(
         post :create, params: {recipe_id: @recipe.id}
       ).to redirect_to('/')
     end
-
   end
-
 
   describe "POST #destroy" do
 
     it "deletes a like from the database" do
-
       post :create, params: { recipe_id: @recipe.id }
       like = Like.find_by(recipe_id: @recipe.id)
       delete :destroy, params: { recipe_id: @recipe.id, id: like.id }
       expect(Like.find_by(recipe_id: @recipe.id)).to eq nil
     end
-
   end
-
 end

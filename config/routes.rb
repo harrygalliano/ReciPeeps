@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'recipes#index'
   post '/recipes/filter', to: 'recipes#filter'
+  get '/recipes/:user_id/filter', to: 'recipes#user_filter'
 
   get '/mycookbook', to: 'favourites#index'
 
