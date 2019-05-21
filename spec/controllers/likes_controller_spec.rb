@@ -21,14 +21,12 @@ RSpec.describe LikesController, type: :controller do
         post :create, params: {recipe_id: @recipe.id}
       ).to redirect_to('/')
     end
-    
-  end
 
+  end
 
   describe "POST #destroy" do
 
     it "deletes a like from the database" do
-
       post :create, params: { recipe_id: @recipe.id }
       like = Like.find_by(recipe_id: @recipe.id)
       delete :destroy, params: { recipe_id: @recipe.id, id: like.id }
