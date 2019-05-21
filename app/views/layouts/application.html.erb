@@ -21,6 +21,7 @@
               <%= search_field_tag :search_bar_input, "", class: "form-control w-100 mr-sm-2", placeholder: 'Search by ingredient' %>
               <%= submit_tag "Search" %>
             <% end %>
+            <div id='filter_message'> <%= @filter_message %> </div>
           </div>
 
           <div class="navbar-right">
