@@ -1,5 +1,4 @@
 feature 'see recipes displayed on index' do
-
   before(:each) do
     sign_up
     log_in

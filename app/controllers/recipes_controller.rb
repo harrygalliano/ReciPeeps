@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  skip_before_action :require_login, only: [:index, :show]
+  skip_before_action :require_login, only: %i[index show]
 
   def new
     @recipe = Recipe.new
@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
 
     if name.empty? || description.empty?
       flash[:danger] = 'Cannot submit empty field.'
-      redirect_to "/recipes/new"
+      redirect_to '/recipes/new'
     else
       recipe = Recipe.create(name: name, description: description, user_id: id)
       recipe.image.attach(image)

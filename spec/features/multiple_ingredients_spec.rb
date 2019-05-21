@@ -1,5 +1,4 @@
 feature 'Create recipe card with multiple ingredients' do
-
   before(:each) do
     sign_up
     log_in
@@ -42,7 +41,7 @@ feature 'Create recipe card with multiple ingredients' do
     fill_in 'ingredients_3[value]', with: 3
     fill_in 'ingredients_3[unit]', with: 'g'
     click_button 'Less Ingredients '
-    expect{ page.find(:css, "#ingredients_2_name") }.to_not raise_error(Capybara::ElementNotFound,  'Unable to find css "#ingredients_2_name"')
-    expect{ page.find(:css, "#ingredients_3_name") }.to raise_error(Capybara::ElementNotFound, 'Unable to find css "#ingredients_3_name"')
+    expect { page.find(:css, '#ingredients_2_name') }.to_not raise_error(Capybara::ElementNotFound, 'Unable to find css "#ingredients_2_name"')
+    expect { page.find(:css, '#ingredients_3_name') }.to raise_error(Capybara::ElementNotFound, 'Unable to find css "#ingredients_3_name"')
   end
 end

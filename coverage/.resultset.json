@@ -12,7 +12,6 @@
       ],
       "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/controllers/ingredients_controller.rb": [
         1,
-        null,
         1,
         35,
         null,
@@ -40,7 +39,6 @@
         1,
         5,
         null,
-        null,
         5,
         0,
         null,
@@ -71,7 +69,6 @@
         null,
         1,
         2,
-        null,
         null,
         null
       ],
@@ -118,7 +115,6 @@
         null,
         1,
         null,
-        null,
         1,
         30,
         30,
@@ -138,7 +134,6 @@
       ],
       "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/controllers/steps_controller.rb": [
         1,
-        null,
         1,
         31,
         null,
@@ -186,7 +181,6 @@
         1,
         37,
         null,
-        null,
         null
       ],
       "/Users/LaurenQurashi/Desktop/Projects/Week10/ReciPeeps/app/models/comment.rb": [
@@ -232,6 +226,6 @@
         null
       ]
     },
-    "timestamp": 1558434463
+    "timestamp": 1558436151
   }
 }

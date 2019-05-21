@@ -1,5 +1,4 @@
 feature 'Create recipe card' do
-
   before(:each) do
     sign_up
     log_in

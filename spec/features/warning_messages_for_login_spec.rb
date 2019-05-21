@@ -1,5 +1,4 @@
 feature 'Login Page' do
-
   scenario 'checks that the user enters an email' do
     sign_up
     visit '/login'

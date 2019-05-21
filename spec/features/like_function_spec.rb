@@ -1,5 +1,4 @@
 feature 'Likes on the Homepage' do
-
   before(:each) do
     sign_up
     log_in
@@ -19,5 +18,4 @@ feature 'Likes on the Homepage' do
     click_button 'Unlike'
     expect(page).to have_content '0 Likes'
   end
-
 end

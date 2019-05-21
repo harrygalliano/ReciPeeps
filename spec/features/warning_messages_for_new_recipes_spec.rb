@@ -1,5 +1,4 @@
 feature 'New Recipe Page' do
-
   before(:each) do
     sign_up
     log_in

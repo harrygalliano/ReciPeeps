@@ -4,7 +4,6 @@ class LikesController < ApplicationController
   def create
     @recipe = find_recipe
 
-
     if already_liked?
       flash[:notice] = "You can't like more than once"
     else
@@ -14,8 +13,8 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    if !(already_liked?)
-      flash[:notice] = "Cannot unlike"
+    if !already_liked?
+      flash[:notice] = 'Cannot unlike'
     else
       @like.destroy
     end
@@ -34,7 +33,6 @@ class LikesController < ApplicationController
   end
 
   def find_like
-   @like = @recipe.likes.find(params[:id])
+    @like = @recipe.likes.find(params[:id])
  end
-
 end

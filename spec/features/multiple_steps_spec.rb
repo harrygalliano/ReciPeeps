@@ -1,5 +1,4 @@
 feature 'Create recipe card with multiple steps' do
-
   before(:each) do
     sign_up
     log_in
@@ -41,7 +40,7 @@ feature 'Create recipe card with multiple steps' do
     fill_in 'steps_2[description]', with: 'test description 2'
     fill_in 'steps_3[description]', with: 'test description 3'
     click_button 'Less Steps '
-    expect{ page.find(:css, "#steps_2_description") }.to_not raise_error Capybara::ElementNotFound, 'Unable to find css "#steps_2_description"'
-    expect{ page.find(:css, "#steps_3_description") }.to raise_error Capybara::ElementNotFound, 'Unable to find css "#steps_3_description"'
+    expect { page.find(:css, '#steps_2_description') }.to_not raise_error Capybara::ElementNotFound, 'Unable to find css "#steps_2_description"'
+    expect { page.find(:css, '#steps_3_description') }.to raise_error Capybara::ElementNotFound, 'Unable to find css "#steps_3_description"'
   end
 end

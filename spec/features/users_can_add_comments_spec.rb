@@ -1,5 +1,4 @@
 feature 'Add comments to recipes' do
-
   before(:each) do
     sign_up
     log_in

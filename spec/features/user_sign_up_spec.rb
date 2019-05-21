@@ -9,7 +9,6 @@ feature 'Sign_up page' do
     expect(page).to have_content 'Password confirmation doesn\'t match Password'
   end
 
-
   scenario 'checks that the user enters a name' do
     visit '/users/new'
     fill_in 'user_name', with: ''
@@ -19,8 +18,6 @@ feature 'Sign_up page' do
     click_button 'Create'
     expect(page).to have_content 'Name can\'t be blank'
   end
-
-
 
   scenario 'checks that the user enters an email' do
     visit '/users/new'
@@ -32,7 +29,6 @@ feature 'Sign_up page' do
     expect(page).to have_content 'Email can\'t be blank'
   end
 
-
   scenario 'checks that the user enters a password' do
     visit '/users/new'
     fill_in 'user_name', with: 'Harry'
@@ -42,7 +38,6 @@ feature 'Sign_up page' do
     click_button 'Create'
     expect(page).to have_content 'Password can\'t be blank'
   end
-
 
   scenario 'checks that the user enters a password that is long enough' do
     visit '/users/new'

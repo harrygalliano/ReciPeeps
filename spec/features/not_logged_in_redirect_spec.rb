@@ -1,5 +1,4 @@
 feature 'Cannot create recipies when not logged in' do
-
   before(:each) do
     sign_up
   end
@@ -8,5 +7,4 @@ feature 'Cannot create recipies when not logged in' do
     visit '/recipes/new'
     expect(page).to have_content 'New user? Signup'
   end
-
 end
