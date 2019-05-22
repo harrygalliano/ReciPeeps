@@ -37,6 +37,12 @@
             <i class="fa fa-clock-o"> 15 Mins</i>
             <i class="fa fa-users"> Serves 2</i>
 
+            <% if recipe.likes.count == 1 %>
+              <p><%= recipe.likes_count %> Like </p>
+            <% else %>
+              <p><%= recipe.likes_count %> Likes </p>
+            <% end %>
+
             <div class="recipe-card-rating">
               <li>
                   <a href="#"><i class="fas fa-star"></i></a>
