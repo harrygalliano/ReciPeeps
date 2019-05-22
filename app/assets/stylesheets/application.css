@@ -30,19 +30,29 @@ body {
   min-width: 380px;
 }
 
+.recipe-card-individual {
+  box-shadow: 0px 0px 6px 2px rgb(221, 221, 221);
+  margin-bottom: 40px;
+}
+
 .recipe-card-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
 }
 
 .recipe-card {
+  transition: 500ms;
   position: relative;
   background: #fff;
   width: 400px;
-  margin: 20px auto;
-  box-shadow: 0px 0px 20px 5px rgb(163, 163, 163);
+}
+
+.recipe-card-individual:hover {
+  transition: 300ms;
+  box-shadow: 0px 0px 13px 3px rgb(163, 163, 163);
 }
 
 .recipe-card-header {
@@ -66,7 +76,7 @@ body {
   padding: 15px;
   border-radius: 50%;
   border: none;
-  background: #0b6435;
+  background: #0ea052;
   position: absolute;
   left: 85.5%;
   bottom: 5%;
@@ -75,13 +85,13 @@ body {
 
 .fa-heart {
   color: #fff;
-  font-size: 2em;
+  font-size: 2.3em;
   font-weight: bold;
 }
 
-.fa-heart-broken {
+.fa-plus {
   color: #fff;
-  font-size: 2em;
+  font-size: 2.3em;
   font-weight: bold;
 }
 
@@ -92,8 +102,8 @@ body {
 }
 
 .recipe-card-unliked-button:hover {
-  background: #0d7e41;
-  box-shadow: 0px 5px 30px 1px #008136;
+  background: #00eb62;
+  box-shadow: 0px 5px 30px 1px #00c954;
   transition: 250ms;
 }
 
@@ -121,6 +131,7 @@ body {
 
 .recipe-card-description {
   margin: 10px 30px;
+  text-overflow: ellipsis;
 }
 
 .recipe-card-cook-btn {
@@ -142,4 +153,76 @@ body {
   background-color: rgba(255, 255, 255, 0.794);
   border: none;
   height: 2px;
+}
+.profile-left {
+  width: 350px;
+  height: 100%;
+}
+
+.profile-right {
+  width: 80%;
+  height: 100%
+}
+
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: rgba(107, 107, 107, 0.171);
+}
+
+.loginregister-container {
+  width: 30%;
+  margin: 0 60%;
+  border-style: none;
+  height: 500px;
+  border-color: rgb(226, 244, 246);
+  background-color: rgba(253, 253, 253, 0.7);
+}
+
+.loginregister-header-text {
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  background-color: rgba(241, 241, 241, 0.7);
+  height: 180px;
+  padding-top: 40px;
+}
+
+.loginregister-background {
+  background-image: url("loginregister.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.loginregister-button {
+  margin-left: 25%;
+  height: 40px;
+  color: #fff;
+  font-weight: bold;
+  background-color: #0ea052;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 3px;
+  width: 200px;
+}
+
+.new-recipe-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.new-recipe-left {
+  width: 50%;
+  text-align: center;
+  border-style: solid;
+  border-color: #b92222;
+}
+
+.new-recipe-right {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  border-style: solid;
+  border-color: #9b9b9b;
 }

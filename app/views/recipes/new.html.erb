@@ -1,19 +1,31 @@
- <% if flash[:danger] %>
-    <div id="error_explanation">
-      <div class="alert alert-danger">
-        <%= flash[:danger] %>
+<div class="new-recipe-container">
+  <div class="new-recipe-left">
+
+    <% if flash[:danger] %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">
+          <%= flash[:danger] %>
+        </div>
       </div>
+    <% end %>
+
+    <div class="new-recipe-container">
+      <h1>Create your recipe!</h1>
+
+
+      <%= form_for @recipe, url: {action: "create"}, html: {class: "new-recipe-form"} do |f| %>
+        <%= f.text_field :name %>
+        <%= f.text_area :description %>
+        <%= f.file_field :image %>
+        <%= f.submit "Create" %>
+      <% end %>
     </div>
-  <% end %>
 
-<h1>Create your recipe!</h1>
+  </div>
 
+  <div class="new-recipe-right">
 
-<%= form_for @recipe, url: {action: "create"}, html: {class: "new-recipe-form"} do |f| %>
-  <%= f.text_field :name %>
-  <%= f.text_area :description %>
-  <%= f.file_field :image %>
-  <%= f.submit "Create" %>
-<% end %>
+    <h1>Preview area</h1>
 
-
+  </div>
+</div>

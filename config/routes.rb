@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+
   post '/comments', to: 'comments#create'
 
   root to: 'recipes#index'
   post '/recipes/filter', to: 'recipes#filter'
   get '/recipes/:user_id/filter', to: 'recipes#user_filter'
+
+  get '/mycookbook', to: 'favourites#index'
 
   get '/users/find', to: 'users#find'
 
@@ -22,5 +25,6 @@ Rails.application.routes.draw do
   resources :users
   resources :recipes do
     resources :likes
+    resources :favourites
   end
 end
