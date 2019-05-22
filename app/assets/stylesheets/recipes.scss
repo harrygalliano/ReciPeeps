@@ -26,7 +26,6 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
-    cursor: pointer;
     transition: 0.5s;
 
 .profile-card-image {
@@ -74,8 +73,7 @@
             font-size: 23px;
             color: #333;
             font-weight: bold;
-            transition: .8s;
-            transform: translateY(200px);
+            transition: .4s;
             opacity: 0;
         } 
     }
@@ -93,8 +91,8 @@
     font-weight: bold;
     letter-spacing: 0.1em;
     margin: 5px 20px;
-    top: 280px;
-    font-size: 40px;
+    top: 290px;
+    font-size: 30px;
     background: rgba(255, 255, 255, 0.4);
     width: 300px;
     border-radius: 20px 0px 0px 20px;
