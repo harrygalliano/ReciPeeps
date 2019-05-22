@@ -1,3 +1,4 @@
+
 <div class="profile-container">
 
   <div class="profile-left">
@@ -8,7 +9,7 @@
         <div class="profile-card-image">
           <div class="profile-card-avatar">
             <img src="https://vignette.wikia.nocookie.net/muppet/images/c/c9/SC_169.jpg/revision/latest/scale-to-width-down/300?cb=20180407180306" width="300" height="320" alt="">
-            <%# <%= gravatar_for @user %> 
+            <%# <%= gravatar_for @user %>
           </div>
 
           <div class="profile-card-name">
@@ -16,9 +17,9 @@
           </div>
 
           <div class="profile-card-description">
-            <a>Profile description goes here</a>
+            <a><%= @user.description %></a>
           </div>
-          
+
         </div>
 
         <div class="profile-card-under-placeholder">
@@ -29,6 +30,7 @@
           </div>
           <div class="profile-icon">
             <a href="favourites">
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
               <i class="far fa-bookmark"> Fav recipes</i>
             </a>
           </div>

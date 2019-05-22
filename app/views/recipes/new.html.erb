@@ -1,12 +1,17 @@
- <% if flash[:danger] %>
-    <div id="error_explanation">
-      <div class="alert alert-danger">
-        <%= flash[:danger] %>
-      </div>
-    </div>
-  <% end %>
+<div class="new-recipe-container">
+  <div class="new-recipe-left">
 
-<h1>Create your recipe!</h1>
+    <% if flash[:danger] %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">
+          <%= flash[:danger] %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="new-recipe-container">
+      <h1>Create your recipe!</h1>
+
 
 <%= form_for @recipe, url: {action: "create"}, html: {class: "new-recipe-form"} do |f| %>
   <%= f.text_field :name %>
