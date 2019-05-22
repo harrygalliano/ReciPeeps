@@ -49,6 +49,7 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.paginate(page: params[:page], per_page: 10)
+    @recipes = Recipe.paginate(page: params[:page], per_page: 10).order("likes_count DESC")
   end
+
 end
