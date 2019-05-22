@@ -30,11 +30,17 @@ body {
   min-width: 380px;
 }
 
+.recipe-card-individual {
+    box-shadow: 0px 0px 6px 2px rgb(221, 221, 221);
+    margin-bottom: 40px;
+}
+
 .recipe-card-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
 }
 
 .recipe-card {
@@ -42,11 +48,9 @@ body {
   position: relative;
   background: #fff;
   width: 400px;
-  margin: 20px auto;
-  box-shadow: 0px 0px 16px 10px rgb(221, 221, 221);
 }
 
-.recipe-card:hover {
+.recipe-card-individual:hover {
   transition: 300ms;
   box-shadow: 0px 0px 13px 3px rgb(163, 163, 163);
 }
@@ -127,6 +131,7 @@ body {
 
 .recipe-card-description {
   margin: 10px 30px;
+  text-overflow: ellipsis;
 }
 
 .recipe-card-cook-btn {
