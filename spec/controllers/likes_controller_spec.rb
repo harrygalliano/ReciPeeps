@@ -10,6 +10,7 @@ RSpec.describe LikesController, type: :controller do
   end
 
   describe "POST #create" do
+
      it "adds a like to the database" do
         post :create, params: { recipe_id: @recipe.id }
         expect(Like.find_by(recipe_id: @recipe.id)).to_not eq nil
@@ -22,6 +23,7 @@ RSpec.describe LikesController, type: :controller do
         ).to redirect_to("/")
       end
    end
+
 
   describe "POST #destroy" do
     it "deletes a like from the database" do
