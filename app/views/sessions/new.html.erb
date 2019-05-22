@@ -1,27 +1,28 @@
-<% provide(:title, "Log in") %>
+<div class="loginregister-background">
+  <% provide(:title, "Log in") %>
 
-<% if flash[:danger] %>
-  <div id="error_explanation">
-    <div class="alert alert-danger">
-       <%= flash[:danger] %>.
+  <div class="loginregister-container">
+
+    <% if flash[:danger] %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">
+          <%= flash[:danger] %>.
+        </div>
     </div>
-</div>
-<% end %>
-<div class="container"> 
-  <h1>Log in</h1>
-  <div class="row">
-    <div class="col-md-7">
-      <%= form_for(:session, url: login_path) do |f| %>
-
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control', required: true %><br>
-
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control', required: true %><br>
-
-        <%= f.submit "Log in", class: "btn btn-primary" %><br>
-      <% end %><br>
-      <p> New user? <%= link_to "Signup", new_user_url %> </p>
-    </div>
-  </div>
+    <% end %>
+    <h1 class="loginregister-header-text">Log in</h1>
+    <div class="container"> 
+          <%= form_for(:session, url: login_path) do |f| %>
+            <br>
+            <div class ="row">
+              <%= f.email_field :email, placeholder: 'Enter your email', class: 'form-control', required: true %><br>
+            </div><br><br>
+            <div class ="row">
+              <%= f.password_field :password, placeholder: 'Enter your password', class: 'form-control', required: true %><br>
+            </div><br><br><br>
+            <%= f.submit "Log in", class: "loginregister-button" %><br>
+          <% end %><br>
+          <p> New user? <%= link_to "Signup", new_user_url %> </p>
+        </div>
+      </div>
 </div>
