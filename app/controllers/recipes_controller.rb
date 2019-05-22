@@ -12,12 +12,15 @@ class RecipesController < ApplicationController
     name = params[:recipe][:name]
     description = params[:recipe][:description]
     image = params[:recipe][:image]
+    servings = params[:recipe][:servings]
+    preparation_time = params[:recipe][:preparation_time]
+
 
     if name.empty? || description.empty?
       flash[:danger] = "Cannot submit empty field."
       redirect_to "/recipes/new"
     else
-      recipe = Recipe.create(name: name, description: description, user_id: id)
+      recipe = Recipe.create(name: name, description: description, user_id: id, servings: servings, preparation_time: preparation_time)
       recipe.image.attach(image)
       redirect_to "/ingredients/#{recipe.id}/new"
     end

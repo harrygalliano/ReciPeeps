@@ -10,6 +10,8 @@ feature "Create recipe card with multiple steps" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
+    fill_in "recipe_servings", with: 2
+    fill_in "recipe_preparation_time", with: "01:30"
     click_button "Create"
 
     fill_in "ingredients_1[name]", with: "test name"
@@ -28,6 +30,8 @@ feature "Create recipe card with multiple steps" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
+    fill_in "recipe_servings", with: 2
+    fill_in "recipe_preparation_time", with: "01:30"
     click_button "Create"
 
     fill_in "ingredients_1[name]", with: "test name"

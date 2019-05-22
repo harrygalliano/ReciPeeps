@@ -12,6 +12,8 @@ feature "see recipes displayed on index" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name 2"
     fill_in "recipe_description", with: "Test recipe description 2"
+    fill_in "recipe_servings", with: 2
+    fill_in "recipe_preparation_time", with: "01:30"
     click_button "Create"
     fill_in "ingredients_1[name]", with: "ingredient name 2"
     fill_in "ingredients_1[value]", with: 200

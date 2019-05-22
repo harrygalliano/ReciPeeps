@@ -5,8 +5,8 @@ require "rails_helper"
 RSpec.describe FavouritesController, type: :controller do
   before(:each) do
     @user = User.create(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456")
-    @recipe = Recipe.create(name: "Lasagne", description: "Tastes real nice", user_id: @user.id)
-    @recipe2 = Recipe.create(name: "Pasta", description: "Tastes real good", user_id: @user.id)
+    @recipe = Recipe.create(name: "Lasagne", description: "Tastes real nice", user_id: @user.id, preparation_time: "01:30", servings: 2)
+    @recipe2 = Recipe.create(name: "Pasta", description: "Tastes real good", user_id: @user.id, preparation_time: "02:30", servings: 4)
     session[:user_id] = @user.id
   end
 

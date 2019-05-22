@@ -4,6 +4,8 @@ def create_recipe
   visit "/recipes/new"
   fill_in "recipe_name", with: "Test recipe name"
   fill_in "recipe_description", with: "Test recipe description"
+  fill_in "recipe_servings", with: 2
+  fill_in "recipe_preparation_time", with: "01:30"
   click_button "Create"
   fill_in "ingredients_1[name]", with: "ingredient name"
   fill_in "ingredients_1[value]", with: 100
@@ -17,6 +19,8 @@ def create_recipe_2
   visit "/recipes/new"
   fill_in "recipe_name", with: "Test recipe name 2"
   fill_in "recipe_description", with: "Test recipe description 2"
+  fill_in "recipe_servings", with: 2
+  fill_in "recipe_preparation_time", with: "01:30"
   click_button "Create"
   fill_in "ingredients_1[name]", with: "ingredient name 2"
   fill_in "ingredients_1[value]", with: 200

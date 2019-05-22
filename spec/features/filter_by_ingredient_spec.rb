@@ -11,6 +11,8 @@ feature "Filtering by ingredient", js: true do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Pasta Bake"
     fill_in "recipe_description", with: "Test recipe description"
+    fill_in "recipe_servings", with: 2
+    fill_in "recipe_preparation_time", with: "01:30"
     click_button "Create"
     fill_in "ingredients_1[name]", with: "pasta"
     fill_in "ingredients_1[value]", with: 100

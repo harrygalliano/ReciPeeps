@@ -5,7 +5,7 @@ require "rails_helper"
 RSpec.describe Comment, type: :model do
   before(:each) do
     @user = User.create(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456")
-    @recipe = Recipe.create(name: "lasagne", description: "Tasty AF", user_id: @user.id)
+    @recipe = Recipe.create(name: "lasagne", description: "Tasty AF", user_id: @user.id, preparation_time: "01:30", servings: 2)
   end
 
   it "Should create valid comment in comments table" do

@@ -10,6 +10,8 @@ feature "Create recipe card" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
+    fill_in "recipe_servings", with: 2
+    fill_in "recipe_preparation_time", with: "01:30"
     click_button "Create"
     expect(page).to have_content "Add Ingredients"
   end
@@ -18,6 +20,8 @@ feature "Create recipe card" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
+    fill_in "recipe_servings", with: 2
+    fill_in "recipe_preparation_time", with: "01:30"
     click_button "Create"
 
     fill_in "ingredients_1[name]", with: "test name"
@@ -31,6 +35,8 @@ feature "Create recipe card" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
+    fill_in "recipe_servings", with: 2
+    fill_in "recipe_preparation_time", with: "01:30"
     click_button "Create"
     fill_in "ingredients_1[name]", with: "test name"
     fill_in "ingredients_1[value]", with: 1
@@ -46,6 +52,8 @@ feature "Create recipe card" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
+    fill_in "recipe_servings", with: 2
+    fill_in "recipe_preparation_time", with: "01:30"
     click_button "Create"
     fill_in "ingredients_1[name]", with: "ingredient name"
     fill_in "ingredients_1[value]", with: 100
@@ -58,5 +66,7 @@ feature "Create recipe card" do
     expect(page).to have_content "Test recipe description"
     expect(page).to have_content "ingredient name - 100.0 g"
     expect(page).to have_content "test description"
+    expect(page).to have_content 2
+    expect(page).to have_content "01:30"
   end
 end

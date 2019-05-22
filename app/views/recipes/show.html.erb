@@ -1,6 +1,8 @@
 <h1><%= @recipe.name %></h1>
 <p><%= @recipe.description %></p>
 <p><a id="user_filter_link" href="/recipes/<%= User.find(@recipe.user_id).id %>/filter"><%= User.find(@recipe.user_id).name %></a> </p>
+<p> Prep time: <%= @recipe.preparation_time %></p>
+<p> <%= @recipe.servings %></p>
 
 <% pre_favourite = @recipe.favourites.find { |favourite| favourite.user_id == current_user.id} %>
 <% if pre_favourite %>

@@ -5,7 +5,7 @@ require "rails_helper"
 RSpec.describe StepsController, type: :controller do
   before(:each) do
     @user = User.create(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456")
-    @recipe = Recipe.create(name: "Lasagne", description: "Tastes real nice", user_id: @user.id)
+    @recipe = Recipe.create(name: "Lasagne", description: "Tastes real nice", user_id: @user.id, preparation_time: "01:30", servings: 2)
     session[:user_id] = @user.id
     @id = @recipe.id
     @ingredient = Ingredient.create(name: "test ing", value: 2.0, unit: "g", recipe_id: @id)
