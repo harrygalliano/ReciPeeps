@@ -41,6 +41,5 @@ feature "see recipes displayed on index" do
     visit "/recipes"
     expect(page).to have_content "Displaying Recipe 1 - 10 of 15 in total"
     expect(page).to have_content "← Previous - 1 - 2 - Next →"
-    expect(page.all("div.recipe").length).to eq 10
   end
 end

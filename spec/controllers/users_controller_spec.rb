@@ -58,7 +58,7 @@ RSpec.describe UsersController, type: :controller do
       expect(User.find(user.id).description).to eq "Test Description"
     end
 
-    xit "edits a pre existing user's email in the database" do
+    it "edits a pre existing user's email in the database" do
       user = User.create(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456")
       User.update(name: "test", email: "test1@test1.com", password: "123456", password_confirmation: "123456", description: "Test Description")
       expect(User.find(user.id).email).to eq "test1@test1.com"

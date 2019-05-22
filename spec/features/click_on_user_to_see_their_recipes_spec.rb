@@ -27,7 +27,7 @@ feature "See a users recipes", js: true   do
   scenario "I can see recipe owners name with recipe on recipe page" do
     create_recipe
     visit "/"
-    first(".recipe").click_link("Let's Cook!")
+    first(".recipe-card-individual").click_link("Let's Cook!")
     expect(page).to have_content "Test Name"
   end
 
@@ -38,7 +38,7 @@ feature "See a users recipes", js: true   do
     log_in_2
     create_recipe_2
     visit "/"
-    first(".recipe").click_link("Let's Cook!")
+    first(".recipe-card-individual").click_link("Let's Cook!")
     find("#user_filter_link").click
     expect(page).to have_content "Displaying 1 Recipe"
     expect(page).to have_content "Test Name"
