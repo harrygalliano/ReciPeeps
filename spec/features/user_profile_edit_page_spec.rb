@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 feature "Edit User Page" do
-
   before(:each) do
     sign_up
     log_in
@@ -50,5 +49,4 @@ feature "Edit User Page" do
     click_button "Save changes"
     expect(page).to have_link "Settings"
   end
-
 end

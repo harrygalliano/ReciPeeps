@@ -44,7 +44,7 @@ group :development, :test do
   gem "rails-flog", require: "flog"
   gem "rspec"
   gem "rspec-rails"
-  gem 'rubocop-performance'
+  gem "rubocop-performance"
   gem "selenium-webdriver"
   gem "simplecov", require: false
   gem "simplecov-console", require: false
