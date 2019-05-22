@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class FavouritesController < ApplicationController
-before_action :find_recipe, except: [:index]
-before_action :find_favourite, only: [:destroy]
+  before_action :find_recipe, except: [:index]
+  before_action :find_favourite, only: [:destroy]
 
   def create
     if already_favourited?
@@ -27,16 +29,16 @@ before_action :find_favourite, only: [:destroy]
 
   private
 
-  def find_recipe
-   @recipe = Recipe.find(params[:recipe_id])
-  end
+    def find_recipe
+      @recipe = Recipe.find(params[:recipe_id])
+    end
 
-  def find_favourite
-    @favourite = @recipe.favourites.find(params[:id])
-  end
+    def find_favourite
+      @favourite = @recipe.favourites.find(params[:id])
+    end
 
-  def already_favourited?
-    Favourite.where(user_id: current_user.id, recipe_id:
-    params[:recipe_id]).exists?
-  end
+    def already_favourited?
+      Favourite.where(user_id: current_user.id, recipe_id:
+      params[:recipe_id]).exists?
+    end
 end
