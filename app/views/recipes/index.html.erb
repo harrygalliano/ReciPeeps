@@ -53,10 +53,13 @@
 </div>
 
 <div class="pagination_box">
-  <div class="pagination_info">
-    <%= page_entries_info @recipes %>
-  </div>
+
   <div class="pagination_links">
     <%= will_paginate @recipes, :container => false, link_separator: ' - ' %>
   </div>
+  
+  <div class="pagination_info">
+    <%= page_entries_info @recipes %>
+  </div>
+
 </div>
