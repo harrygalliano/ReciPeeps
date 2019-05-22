@@ -24,13 +24,12 @@
 
         <div class="profile-card-under-placeholder">
           <div class="profile-icon">
-            <a href="editprofile">
-              <i class="far fa-edit">Edit profile</i>
+            <a href="/users/<%= @user.id %>/edit">
+              <i class='far fa-edit'>Edit profile</i>
             </a>
           </div>
           <div class="profile-icon">
-            <a href="favourites">
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+            <a href="#">
               <i class="far fa-bookmark"> Fav recipes</i>
             </a>
           </div>
