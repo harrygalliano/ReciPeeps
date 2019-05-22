@@ -10,7 +10,7 @@ class LikesController < ApplicationController
     else
       @recipe.likes.create(user_id: current_user.id)
     end
-    redirect_to "/"
+    redirect_back(fallback_location: root_path)
   end
 
   def destroy
@@ -18,7 +18,7 @@ class LikesController < ApplicationController
     else
       @like.destroy
     end
-    redirect_to "/"
+    redirect_back(fallback_location: root_path)
   end
 
   private
