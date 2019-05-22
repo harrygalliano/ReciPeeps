@@ -44,4 +44,30 @@ RSpec.describe UsersController, type: :controller do
       expect(get(:find)).to redirect_to "/users/#{user.id}"
     end
   end
+
+  describe "POST #update"
+
+  it "edits a pre existing user's Description in the database" do
+    user = User.create(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456")
+    User.update(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456", description: "Test Description")
+    expect(User.find(user.id).description).to eq "Test Description"
+  end
+
+  it "edits a pre existing user's email in the database" do
+    user = User.create(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456")
+    User.update(name: "test", email: "test1@test1.com", password: "123456", password_confirmation: "123456", description: "Test Description")
+    expect(User.find(user.id).email).to eq "test1@test1.com"
+  end
+
+  it "edits a pre existing user's name in the database" do
+    user = User.create(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456")
+    User.update(name: "test A", email: "test@test.com", password: "123456", password_confirmation: "123456", description: "Test Description")
+    expect(User.find(user.id).name).to eq "test A"
+  end
+
+  it "edits a pre existing user's passwords in the database" do
+    user = User.create(name: "test", email: "test@test.com", password: "123456", password_confirmation: "123456")
+    User.update(name: "test", email: "test@test.com", password: "000000", password_confirmation: "000000", description: "Test Description")
+    expect(response).to have_http_status(:success)
+  end
 end
