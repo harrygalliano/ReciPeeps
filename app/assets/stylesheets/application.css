@@ -169,7 +169,7 @@ body {
   width: 30%;
   margin: 0 60%;
   border-style: none;
-
+  height: 500px;
   border-color: rgb(226, 244, 246);
   background-color: rgba(253, 253, 253, 0.7);
 }
@@ -198,4 +198,5 @@ body {
   border-radius: 10px;
   border: none;
   letter-spacing: 3px;
+  width: 200px;
 }
