@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-feature "Create recipe card with multiple ingredients" do
+feature "Create recipe card with multiple ingredients", js: true do
   before(:each) do
     sign_up
     log_in
   end
 
-  scenario "I can add multiple ingredients to a recipe I have started to make", js: true do
+  scenario "I can add multiple ingredients to a recipe I have started to make" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
@@ -26,7 +26,7 @@ feature "Create recipe card with multiple ingredients" do
     expect(page).to have_content "Add Method"
   end
 
-  scenario "I can remove ingredients to a recipe I have started to make", js: true do
+  scenario "I can remove ingredients to a recipe I have started to make" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"

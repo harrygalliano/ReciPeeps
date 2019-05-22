@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-feature "see recipes displayed on index" do
+feature "see recipes displayed on index", js: true do
   before(:each) do
     sign_up
     log_in
   end
 
-  scenario "I see all recipes when I visit index", js: true do
+  scenario "I see all recipes when I visit index" do
     create_recipe
 
     visit "/recipes/new"
@@ -31,14 +31,14 @@ feature "see recipes displayed on index" do
     expect(page).to have_content "Test recipe description 2"
   end
 
-  scenario "Recipes are links", js: true do
+  scenario "Recipes are links" do
     create_recipe
     visit "/recipes"
     click_link "Let's Cook!"
     expect(page).to have_content "ingredient name"
   end
 
-  scenario "Pagination is working", js: true do
+  scenario "Pagination is working" do
     15.times { create_recipe }
     visit "/recipes"
     expect(page).to have_content "Displaying Recipe 1 - 10 of 15 in total"

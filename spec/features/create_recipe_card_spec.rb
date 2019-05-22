@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-feature "Create recipe card" do
+feature "Create recipe card", js: true do
   before(:each) do
     sign_up
     log_in
@@ -16,7 +16,7 @@ feature "Create recipe card" do
     expect(page).to have_content "Add Ingredients"
   end
 
-  scenario "I can add ingredients to a recipe I have started to make", js: true do
+  scenario "I can add ingredients to a recipe I have started to make" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
@@ -31,7 +31,7 @@ feature "Create recipe card" do
     expect(page).to have_content "Add Method"
   end
 
-  scenario "I can add method steps to a recipe I have started to make", js: true do
+  scenario "I can add method steps to a recipe I have started to make" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
@@ -48,7 +48,7 @@ feature "Create recipe card" do
     expect(page).to have_content "Test recipe name"
   end
 
-  scenario "I can add a recipe and see it displayed", js: true do
+  scenario "I can add a recipe and see it displayed" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"

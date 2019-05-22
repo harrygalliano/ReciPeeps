@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-feature "User can add recipes to favourites" do
-  scenario "logged in user can add recipe to favourites", js: true do
+feature "User can add recipes to favourites", js: true do
+  scenario "logged in user can add recipe to favourites" do
     sign_up
     log_in
     create_recipe
@@ -12,7 +12,7 @@ feature "User can add recipes to favourites" do
     expect(page).to_not have_content "Test recipe name", exact: true
   end
 
-  scenario "logged in user can remove recipe from favourites", js: true do
+  scenario "logged in user can remove recipe from favourites" do
   sign_up
   log_in
   create_recipe
