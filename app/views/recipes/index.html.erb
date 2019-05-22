@@ -34,8 +34,8 @@
               <a><%= recipe.name %></a>
             </h1>
             <i class="fa"> <a href="/recipes/<%= User.find(recipe.user_id).id %>/filter"><%= User.find(recipe.user_id).name %></a> </i>
-            <i class="fa fa-clock-o"> 15 Mins</i>
-            <i class="fa fa-users"> Serves 2</i>
+            <i class="fa fa-clock-o">Cooking Time: <%= recipe.cooking_time %></i>
+            <i class="fa fa-users"> Serves <%= recipe.serving %></i>
 
             <% if recipe.likes.count == 1 %>
               <p><%= recipe.likes_count %> Like </p>
@@ -65,7 +65,7 @@
   <div class="pagination_links">
     <%= will_paginate @recipes, :container => false, link_separator: ' - ' %>
   </div>
-  
+
   <div class="pagination_info">
     <%= page_entries_info @recipes %>
   </div>
