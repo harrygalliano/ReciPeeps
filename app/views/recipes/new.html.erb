@@ -1,9 +1,9 @@
 <div class="new-recipe-container">
-  <% if flash[:ocr_text].nil? %>
-  <div class="new-recipe-full">
-  <% else %>
-  <div class="new-recipe-left">
-  <% end %>
+    <% if flash[:ocr_text].nil? %>
+    <div class="new-recipe-full card">
+    <% else %>
+    <div class="new-recipe-left">
+    <% end %>
 
     <% if flash[:danger] %>
       <div id="error_explanation">
