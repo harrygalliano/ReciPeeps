@@ -33,6 +33,7 @@ gem "jbuilder", "~> 2.5"
 gem "jquery-ui-rails"
 gem "jquery-rails"
 gem "rails-ujs", "~> 0.1.0"
+gem 'rest-client'
 gem "webpacker"
 
 gem "will_paginate", "~> 3.1.1"
@@ -51,6 +52,7 @@ group :development, :test do
   gem "simplecov", require: false
   gem "simplecov-console", require: false
   gem "webdrivers"
+  gem 'dotenv-rails'
 end
 
 group :development do
