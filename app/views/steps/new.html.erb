@@ -1,39 +1,56 @@
-<h1>Add Method</h1>
+<div class="new-recipe-container">
+  <% if flash[:ocr_text].nil? %>
+  <div class="new-recipe-full">
+  <% else %>
+  <div class="new-recipe-left">
+  <% end %>
 
-<%= form_for @step, url: {action: "create"}, html: {class: "new-step-form"} do |f| %>
-  <div id='step_1'></div>
-  <div id='step_2'></div>
-  <div id='step_3'></div>
-  <div id='step_4'></div>
-  <div id='step_5'></div>
-  <div id='step_6'></div>
-  <div id='step_7'></div>
-  <div id='step_8'></div>
-  <div id='step_9'></div>
-  <div id='step_10'></div>
-  <div id='step_11'></div>
-  <div id='step_12'></div>
-  <div id='step_13'></div>
-  <div id='step_14'></div>
-  <div id='step_15'></div>
-  <div id='step_16'></div>
-  <div id='step_17'></div>
-  <div id='step_18'></div>
-  <div id='step_19'></div>
-  <div id='step_20'></div>
-  <%= f.submit "Submit" %>
-<% end %>
+    <h1 class='new-recipe-title'>Add Method</h1>
 
-<form action="index.html" method="post" id='add_step_form'>
-  <input type="button" id="add_step_button" value="More Steps">
-</form>
+    <div id='new-recipe-form' class="row justify-content-center align-items-center">
+      <%= form_for @step, url: {action: "create"}, html: {class: "form-group"} do |f| %>
+        <ol>
+          <div id='step_1' class='form-group'></div>
+          <div id='step_2' class='form-group'></div>
+          <div id='step_3' class='form-group'></div>
+          <div id='step_4' class='form-group'></div>
+          <div id='step_5' class='form-group'></div>
+          <div id='step_6' class='form-group'></div>
+          <div id='step_7' class='form-group'></div>
+          <div id='step_8' class='form-group'></div>
+          <div id='step_9' class='form-group'></div>
+          <div id='step_10' class='form-group'></div>
+          <div id='step_11' class='form-group'></div>
+          <div id='step_12' class='form-group'></div>
+          <div id='step_13' class='form-group'></div>
+          <div id='step_14' class='form-group'></div>
+          <div id='step_15' class='form-group'></div>
+          <div id='step_16' class='form-group'></div>
+          <div id='step_17' class='form-group'></div>
+          <div id='step_18' class='form-group'></div>
+          <div id='step_19' class='form-group'></div>
+          <div id='step_20' class='form-group'></div>
+        </ol>
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
 
-<form action="index.html" method="post" id='add_step_form'>
-  <input type="button" id="remove_step_button" value="Less Steps ">
-</form>
-
-<% unless flash[:ocr_text].nil? %>
-  <div class="ocr_output">
-    <%= simple_format(flash[:ocr_text]) %>
+    <div class="add-subtract-inputs row justify-content-center align-items-center">
+      <form action="index.html" method="post" id='add_step_form'>
+        <input type="button" id="add_step_button" value="More Steps",  class='btn btn-primary'>
+      </form>
+      <form action="index.html" method="post" id='add_step_form'>
+        <input type="button" id="remove_step_button" value="Fewer Steps",  class='btn btn-primary'>
+      </form>
+    </div>
   </div>
-<% end %>
+
+  <% unless flash[:ocr_text].nil? %>
+  <div class="new-recipe-right">
+    <% flash.keep(:ocr_text) %>
+    <div class="ocr_output">
+      <%= simple_format(flash[:ocr_text]) %>
+    </div>
+  </div>
+  <% end %>
+</div>

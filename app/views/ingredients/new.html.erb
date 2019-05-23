@@ -1,40 +1,55 @@
-<h1>Add Ingredients</h1>
+<div class="new-recipe-container">
+  <% if flash[:ocr_text].nil? %>
+  <div class="new-recipe-full">
+  <% else %>
+  <div class="new-recipe-left">
+  <% end %>
 
-<%= form_for @ingredient, url: {action: "create"}, html: {class: "new-ingredient-form"} do |f| %>
- <div id='ingredient_1'></div>
- <div id='ingredient_2'></div>
- <div id='ingredient_3'></div>
- <div id='ingredient_4'></div>
- <div id='ingredient_5'></div>
- <div id='ingredient_6'></div>
- <div id='ingredient_7'></div>
- <div id='ingredient_8'></div>
- <div id='ingredient_9'></div>
- <div id='ingredient_10'></div>
- <div id='ingredient_11'></div>
- <div id='ingredient_12'></div>
- <div id='ingredient_13'></div>
- <div id='ingredient_14'></div>
- <div id='ingredient_15'></div>
- <div id='ingredient_16'></div>
- <div id='ingredient_17'></div>
- <div id='ingredient_18'></div>
- <div id='ingredient_19'></div>
- <div id='ingredient_20'></div>
- <%= f.submit "Submit" %>
-<% end %>
+  <h1 class='new-recipe-title'>Add Ingredients</h1>
 
-<form action="index.html" method="post" id='add_ingredient_form'>
-  <input type="button" id="add_ingredient_button" value="More Ingredients">
-</form>
+    <div id='new-recipe-form' class="row justify-content-center align-items-center">
+      <%= form_for @ingredient, url: {action: "create"}, html: {class: "form-group"} do |f| %>
+      <div id='ingredient_1' class='form-group'></div>
+      <div id='ingredient_2' class='form-group'></div>
+      <div id='ingredient_3' class='form-group'></div>
+      <div id='ingredient_4' class='form-group'></div>
+      <div id='ingredient_5' class='form-group'></div>
+      <div id='ingredient_6' class='form-group'></div>
+      <div id='ingredient_7' class='form-group'></div>
+      <div id='ingredient_8' class='form-group'></div>
+      <div id='ingredient_9' class='form-group'></div>
+      <div id='ingredient_10' class='form-group'></div>
+      <div id='ingredient_11' class='form-group'></div>
+      <div id='ingredient_12' class='form-group'></div>
+      <div id='ingredient_13' class='form-group'></div>
+      <div id='ingredient_14' class='form-group'></div>
+      <div id='ingredient_15' class='form-group'></div>
+      <div id='ingredient_16' class='form-group'></div>
+      <div id='ingredient_17' class='form-group'></div>
+      <div id='ingredient_18' class='form-group'></div>
+      <div id='ingredient_19' class='form-group'></div>
+      <div id='ingredient_20' class='form-group'></div>
+      <%= f.submit "Submit", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
 
-<form action="index.html" method="post" id='add_ingredient_form'>
-  <input type="button" id="remove_ingredient_button" value="Less Ingredients ">
-</form>
+    <div class="add-subtract-inputs row justify-content-center align-items-center">
+      <form action="index.html" method="post" id='add_ingredient_form'>
+        <input type="button" id="add_ingredient_button" value="More Ingredients" class='btn btn-primary'>
+      </form>
 
-<% unless flash[:ocr_text].nil? %>
-  <% flash.keep(:ocr_text) %>
-  <div class="ocr_output">
-    <%= simple_format(flash[:ocr_text]) %>
+      <form action="index.html" method="post" id='remove_ingredient_form'>
+        <input type="button" id="remove_ingredient_button" value="Fewer Ingredients" class='btn btn-primary'>
+      </form>
+    </div>
   </div>
-<% end %>
+
+  <% unless flash[:ocr_text].nil? %>
+  <div class="new-recipe-right">
+    <% flash.keep(:ocr_text) %>
+    <div class="ocr_output">
+      <%= simple_format(flash[:ocr_text]) %>
+    </div>
+  </div>
+  <% end %>
+</div>

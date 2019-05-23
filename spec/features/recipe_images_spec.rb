@@ -11,7 +11,7 @@ feature "Recipes have images" do
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
     attach_file("recipe_image", Rails.root + "public/apple-touch-icon.png")
-    click_button "Create"
+    click_button "Submit Recipe"
     visit "/recipes"
     expect(page.html).to include '<img class="recipe_image_index"'
   end
@@ -21,7 +21,7 @@ feature "Recipes have images" do
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
     attach_file("recipe_image", Rails.root + "public/apple-touch-icon.png")
-    click_button "Create"
+    click_button "Submit Recipe"
     fill_in "ingredients_1[name]", with: "ingredient name"
     fill_in "ingredients_1[value]", with: 100
     fill_in "ingredients_1[unit]", with: "g"
