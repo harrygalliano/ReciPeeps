@@ -183,7 +183,7 @@ body {
 }
 
 .loginregister-background {
-  background-image: url("loginregister.jpg");
+  background-image: url("https://github.com/harrygalliano/ReciPeeps/blob/master/app/assets/images/loginregister.jpg?raw=true");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
