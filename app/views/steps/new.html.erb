@@ -31,3 +31,9 @@
 <form action="index.html" method="post" id='add_step_form'>
   <input type="button" id="remove_step_button" value="Less Steps ">
 </form>
+
+<% unless flash[:ocr_text].nil? %>
+  <div class="ocr_output">
+    <%= simple_format(flash[:ocr_text]) %>
+  </div>
+<% end %>
