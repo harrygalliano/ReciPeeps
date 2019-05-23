@@ -14,12 +14,14 @@
  *= require_self
  */
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Montaga&display=swap);
 
 body {
   padding: 0;
   font-family: Raleway, sans-serif;
   list-style-type: none;
   text-decoration: none;
+  
 }
 
 .navbar {
@@ -126,7 +128,10 @@ body {
 
 .recipe-card-description {
   margin: 10px 30px;
+  white-space: wrap; 
+  overflow: hidden;
   text-overflow: ellipsis;
+  height: 100px;
 }
 
 .recipe-card-cook-btn {
@@ -178,7 +183,7 @@ body {
 }
 
 .loginregister-background {
-  background-image: url("loginregister.jpg");
+  background-image: url("https://github.com/harrygalliano/ReciPeeps/blob/master/app/assets/images/loginregister.jpg?raw=true");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -216,7 +221,203 @@ body {
   border-color: #9b9b9b;
 }
 
-.recipe_image_container {
-  
+.recipe-show-container {
+  margin: 0 auto;
+  width: 70%;
+  height: 600px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
 
+.recipe-show-image {
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  border-radius: 30px;
+  width:100%;
+  height:100%;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.recipe-show-body{
+  position: absolute;
+  margin: 30px;
+  height: 560px;
+  width: 65%;
+  top: 120px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: scroll;
+}
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fafafa00; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(117, 117, 117, 0.5); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(200, 231, 248); 
+}
+
+.recipe-show-title {
+  font-family: 'Montaga', serif;
+  font-size: 60px;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: wrap;
+}
+
+.recipe-show-body-description {
+  margin-left: 150px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid;
+  font-weight: bold;
+  height: 130px;
+}
+
+.recipe-show-icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.recipe-show-icons-blocks {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+}
+
+.recipe-show-icons-blowup {
+  font-size: 60px;
+  color: rgba(127, 192, 246, 0.4);
+  margin-left: 15px;
+  margin-top: 10px;
+}
+#recipe-show-icons-time {
+  position: absolute;
+  top: 270px;
+  color: white;
+  font-weight: bolder;
+}
+
+#recipe-show-icons-serving {
+  position: absolute;
+  top: 270px;
+  color: white;
+  font-weight: bolder;
+}
+
+#user_filter_link {
+  position: absolute;
+  top: 270px;
+  color: white;
+  font-weight: bolder;
+}
+
+.recipe-show-main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.recipe-show-text-heading {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+#recipe-show-list {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.recipe-show-comments {
+  width: 100%;
+}
+
+.recipe-show-comments-head {
+  color: rgba(0, 44, 73, 0.5);
+  font-size: 80px;
+  height: 180px;
+  padding-top: 40px;
+  padding-left: 100px;
+}
+.recipe-show-submittag {
+  height: 40px;
+  background-color: rgb(128, 214, 240);
+  border: none;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.recipe-show-commentfield {
+  width: 200px;
+  top: -30px;
+}
+
+.recipe-show-commentfield {
+  margin-left: 400px;
+  height: 40px;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.recipe-show-comment-box {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  width: 600px;
+  border-radius: 20px;;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.recipe-show-comment_name {
+  color: black;
+  letter-spacing: 3px;
+  margin-left: 50px;
+  font-size: 30px;
+  border-bottom: 1px solid;
+}
+.recipe-show-comment_body {
+  margin-left: 20px;
+  letter-spacing: 3px;
+}
+
+.recipe-show-footer {
+  height: 200px;
+}
+
+.recipe-show-fav {
+  position: absolute;
+  top: 270px;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  background: none;
 }
