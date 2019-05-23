@@ -37,10 +37,11 @@
             <h1 class="recipe-card-title-container">
               <a><%= recipe.name %></a>
             </h1>
-            <i class="fa"> <a href="/recipes/<%= User.find(recipe.user_id).id %>/filter"><%= User.find(recipe.user_id).name %></a> </i>
-            <i class="fa fa-clock-o">Cooking Time: <%= recipe.cooking_time %></i>
-            <i class="fa fa-users"> Serves <%= recipe.serving %></i>
-
+            <div class="recipe-card-icons">
+              <i class="fas fa-user"> <a href="/recipes/<%= User.find(recipe.user_id).id %>/filter"><%= User.find(recipe.user_id).name %></a> </i>
+              <i class="fas fa-clock"> <%= recipe.cooking_time %></i>
+              <i class="fas fa-utensils">  <%= recipe.serving %></i>
+            </div>
             <% if recipe.likes.count == 1 %>
               <p><%= recipe.likes_count %> Like </p>
             <% else %>
