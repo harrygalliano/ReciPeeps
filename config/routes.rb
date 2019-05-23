@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  post 'ocr', to: 'ocr#create'
   post '/comments', to: 'comments#create'
 
   root to: 'recipes#index'

@@ -9,9 +9,8 @@
       </div>
     <% end %>
 
-    <div class="new-recipe-container">
+    <div class="new-recipe-forms">
       <h1>Create your recipe!</h1>
-
 
       <%= form_for @recipe, url: {action: "create"}, html: {class: "new-recipe-form"} do |f| %>
         <%= f.text_field :name %>
@@ -21,13 +20,20 @@
         <%= f.file_field :image %>
         <%= f.submit "Create" %>
       <% end %>
+
+      <p> Copying in a recipe? You can upload a picture here and we'll convert it into text so you can copy and paste those detailed descriptions rather than writing them out by hand!</p>
+      <%= form_tag("/ocr", method: "post", multipart: true) do %>
+        <%= file_field_tag(:image) %>
+        <%= submit_tag("Submit") %>
+      <% end %>
     </div>
 
-  </div>
-
   <div class="new-recipe-right">
-
-    <h1>Preview area</h1>
-
+    <% unless flash[:ocr_text].nil? %>
+    <% flash.keep(:ocr_text) %>
+    <div class="ocr_output">
+      <%= simple_format(flash[:ocr_text]) %>
+    </div>
+   <% end %>
   </div>
 </div>
