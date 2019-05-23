@@ -10,17 +10,16 @@ require "selenium-webdriver"
 require_relative "web_helpers/user_helpers.rb"
 require_relative "web_helpers/recipe_helpers.rb"
 
-Capybara.register_driver :chrome do |app|
+Capybara.register_driver :headless_chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    # chromeOptions: { "args" => %w[headless disable-gpu] }
+    chromeOptions: { "args" => %w[headless disable-gpu] }
   )
-  # profile = Selenium::WebDriver::Firefox::Profile.new
   client = Selenium::WebDriver::Remote::Http::Default.new
   client.read_timeout = 120 # instead of the default 60
   Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
 end
 
-Capybara.javascript_driver = :chrome
+Capybara.javascript_driver = :headless_chrome
 
 system("clear")
 
