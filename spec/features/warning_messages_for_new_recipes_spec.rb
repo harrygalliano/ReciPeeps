@@ -10,7 +10,7 @@ feature "New Recipe Page" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: ""
-    click_button "Create"
+    click_button "Submit Recipe"
     expect(page).to have_content "Cannot submit empty field."
   end
 
@@ -18,7 +18,7 @@ feature "New Recipe Page" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    click_button "Submit Recipe"
     click_button "Submit"
     expect(page.html).to include 'class="ingredients new"'
   end
@@ -26,7 +26,7 @@ feature "New Recipe Page" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    click_button "Submit Recipe"
     fill_in "ingredients_1[name]", with: "test name"
     fill_in "ingredients_1[value]", with: 1
     fill_in "ingredients_1[unit]", with: "g"

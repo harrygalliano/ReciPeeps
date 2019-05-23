@@ -75,13 +75,13 @@
             font-weight: bold;
             transition: .4s;
             opacity: 0;
-        } 
+        }
     }
 }
 
 .profile-card:hover .profile-icon a {
     color: rgb(0, 0, 0);
-    opacity: 1; 
+    opacity: 1;
 }
 
 .profile-card-name {
@@ -134,4 +134,73 @@
     font-size: 30px;
     letter-spacing: 2px;
     font-weight: bold;
+}
+
+.new-recipe-full {
+  width: 95%;
+  border-style: solid;
+  border-color: #b92222;
+  padding: 20px;
+  text-align: center;
+}
+
+.new-recipe-left {
+  width: 48%;
+  text-align: center;
+  border-style: solid;
+  border-color: #b92222;
+}
+
+.new-recipe-right {
+  width: 48%;
+  height: 100%;
+  text-align: center;
+  border-style: solid;
+  border-color: #b92222;
+  padding: 20px;
+}
+
+.form-group-recipe {
+  width: 50%;
+}
+
+.form-group-step {
+  width: 80%;
+}
+
+.upload-field {
+  padding: 4px;
+  margin: 5px;
+}
+
+.new-recipe-label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.new-ingredient-input {
+  float: right;
+}
+
+.new-ingredient-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.new-recipe-title {
+  margin: 30px
+}
+
+#ocr-upload-form {
+  margin-top: 35px;
+}
+
+div[id*='ingredient_'] {
+  margin-bottom: 5px;
+}
+
+.add-subtract-inputs form {
+  padding: 10px;
 }

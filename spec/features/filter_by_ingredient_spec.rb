@@ -11,7 +11,7 @@ feature "Filtering by ingredient", js: true do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Pasta Bake"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    click_button "Submit Recipe"
     fill_in "ingredients_1[name]", with: "pasta"
     fill_in "ingredients_1[value]", with: 100
     fill_in "ingredients_1[unit]", with: "g"
