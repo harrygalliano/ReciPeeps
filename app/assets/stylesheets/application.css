@@ -194,29 +194,3 @@ body {
   letter-spacing: 3px;
   width: 200px;
 }
-
-.new-recipe-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.new-recipe-left {
-  width: 50%;
-  text-align: center;
-  border-style: solid;
-  border-color: #b92222;
-}
-
-.new-recipe-right {
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  border-style: solid;
-  border-color: #9b9b9b;
-}
-
-.recipe_image_container {
-  
-
-}

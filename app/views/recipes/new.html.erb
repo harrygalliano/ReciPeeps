@@ -1,5 +1,9 @@
 <div class="new-recipe-container">
+  <% if flash[:ocr_text].nil? %>
+  <div class="new-recipe-full">
+  <% else %>
   <div class="new-recipe-left">
+  <% end %>
 
     <% if flash[:danger] %>
       <div id="error_explanation">
@@ -9,31 +13,38 @@
       </div>
     <% end %>
 
-    <div class="new-recipe-forms">
-      <h1>Create your recipe!</h1>
-
-      <%= form_for @recipe, url: {action: "create"}, html: {class: "new-recipe-form"} do |f| %>
-        <%= f.text_field :name %>
-        <%= f.text_area :description %>
-        <%= f.time_field :cooking_time %>
-        <%= f.number_field :serving, min: 1, step: 1 %>
-        <%= f.file_field :image %>
-        <%= f.submit "Create" %>
-      <% end %>
-
-      <p> Copying in a recipe? You can upload a picture here and we'll convert it into text so you can copy and paste those detailed descriptions rather than writing them out by hand!</p>
-      <%= form_tag("/ocr", method: "post", multipart: true) do %>
-        <%= file_field_tag(:image) %>
-        <%= submit_tag("Submit") %>
+    <h1 class='new-recipe-title'>Create your recipe!</h1>
+    <div id='new-recipe-form' class="row justify-content-center align-items-center">
+      <%= form_for @recipe, url: {action: "create"}, html: {class: "form-group"} do |f| %>
+      <%= label_tag(:name, "Recipe title", class: 'new-recipe-label') %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= label_tag(:description, "Recipe description", class: 'new-recipe-label') %>
+        <%= f.text_area :description, class: 'form-control' %>
+        <%= label_tag(:cooking_time, "Cooking time", class: 'new-recipe-label') %>
+        <%= f.time_field :cooking_time, class: 'form-control' %>
+        <%= label_tag(:serving, "Serving suggestion", class: 'new-recipe-label') %>
+        <%= f.number_field :serving, min: 1, step: 1, class: 'form-control' %>
+        <%= label_tag(:image, "Recipe picture", class: 'new-recipe-label') %>
+        <%= f.file_field :image, class: 'form-control upload-field' %>
+        <%= f.submit "Submit Recipe", class: 'btn btn-primary' %>
       <% end %>
     </div>
 
+    <div id='ocr-upload-form' class="row justify-content-center align-items-center">
+      <%= form_tag("/ocr", method: "post", multipart: true, class: 'form-group') do %>
+      <p>Copying in a recipe? You can upload a picture here and we'll convert it into text so you can copy and paste those detailed descriptions rather than writing them out by hand!</p>
+      <%= file_field_tag(:image, class: 'form-control upload-field') %>
+      <%= submit_tag("Upload", class: 'btn btn-secondary') %>
+      <% end %>
+    </div>
+  </div>
+
+  <% unless flash[:ocr_text].nil? %>
   <div class="new-recipe-right">
-    <% unless flash[:ocr_text].nil? %>
     <% flash.keep(:ocr_text) %>
     <div class="ocr_output">
       <%= simple_format(flash[:ocr_text]) %>
     </div>
-   <% end %>
   </div>
+  <% end %>
 </div>

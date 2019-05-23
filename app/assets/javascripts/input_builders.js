@@ -1,8 +1,11 @@
 (function(exports) {
 
   var build_ingredients_input = function(id) {
-    form = [`<input type="text" name="ingredients_${id}[name]" id="ingredients_${id}_name" required />`,
+    form = [`<label class="new-ingredient-label" for="ingredients_${id}_name">Ingredient: </label>`,
+            `<input type="text" name="ingredients_${id}[name]" id="ingredients_${id}_name" required />`,
+            `<label class="new-ingredient-label" for="ingredients_${id}_value">Amount: </label>`,
             `<input step="0.5" type="number" name="ingredients_${id}[value]" id="ingredients_${id}_value" required />`,
+            `<label class="new-ingredient-label" for="ingredients_${id}_unit">Unit: </label>`,
             `<input type="text" name="ingredients_${id}[unit]" id="ingredients_${id}_unit" required />`
           ].join('')
     return form
