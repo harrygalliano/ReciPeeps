@@ -14,6 +14,7 @@
  *= require_self
  */
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Kurale&display=swap);
 
 body {
   padding: 0;
@@ -216,7 +217,75 @@ body {
   border-color: #9b9b9b;
 }
 
-.recipe_image_container {
-  
+.recipe-show-container {
+  border-style: solid;
+  border-color: rgb(187, 229, 245);
+  width: 60%;
+  margin-left: 15%;
+  border-radius: 0px 140px 0px 0px;
+  -webkit-border-radius: 0px 140px 0px 0px;
+  -moz-border-radius: 0px 140px 0px 0px;
+  -ms-border-radius: 0px 140px 0px 0px;
+  -o-border-radius: 0px 140px 0px 0px;
+}
+
+.recipe-show-firstrow {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.recipe-show-details {
+
+}
+
+.recipe-show-details-description {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.recipe-show-details-icons {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  width: 400px;
+}
+
+.recipe-show-icons {
+  font-size: 20px;
+  align-self: flex-end;
+}
+
+.recipe-show-image {
+  width:300px;
+  height:300px;
+  border-radius: 50%;
+  position: absolute;
+  right: 25%;
+}
+
+.recipe-show-person {
+  font-size: 20px;
+  margin-top: 90px;
+}
+
+.recipe-show-split-header {
+  width: 70%;
+  height: 150px;
+  border-top: 2px solid rgb(107, 175, 195);
+  font-size: 20px;
+}
+
+.recipe-show-title {
+  font-family: 'Kurale', serif;
+  font-size: 60px;
+  margin-top: 40px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.recipe-show-body {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
 
 }

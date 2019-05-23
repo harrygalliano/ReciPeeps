@@ -1,36 +1,54 @@
-<div class="new-recipe-container">
+<div class="recipe-show-container">
 
-  <h1><%= @recipe.name %></h1>
-  <p><%= @recipe.description %></p>
-  <p><a id="user_filter_link" href="/recipes/<%= User.find(@recipe.user_id).id %>/filter"><%= User.find(@recipe.user_id).name %></a> </p>
+  <div class="recipe-show-firstrow">
 
-  <% pre_favourite = @recipe.favourites.find { |favourite| favourite.user_id == current_user.id} %>
-  <% if pre_favourite %>
-    <%= button_to 'Unfavourite', recipe_favourite_path(@recipe, pre_favourite), method: :delete %>
-  <% else %>
-    <%= button_to 'Favourite', recipe_favourites_path(@recipe), method: :post %>
-  <% end %>
-
-  <% if @recipe.image.attached? %>
-    <div class="recipe_image_container">
-      <%= image_tag @recipe.image, class: "recipe_image_show", height: '150' %>
+    <div class="recipe-show-details">
+      <div class="recipe-show-title">
+        <h1 class="recipe-show-title"><%= @recipe.name %></h1>
+      </div>
+      <div class="recipe-show-details-icons">
+        <div class="recipe-show-icons">
+          <i class="fas fa-clock">  15 mins</i>
+        </div>
+        <div class="recipe-show-icons">
+          <i class="fas fa-utensils">  2 servings</i>
+        </div>
+        <div class="recipe-show-person">
+          <i class="fas fa-user-edit">  <a id="user_filter_link" href="/recipes/<%= User.find(@recipe.user_id).id %>/filter"><%= User.find(@recipe.user_id).name %></a></i>
+        </div>
+      </div>
     </div>
-  <% end %>
 
-  <h2>Ingredients</h2>
-  <ul>
-  <% @ingredients.each do |ingredient| %>
-    <li><%= ingredient.name %> - <%= ingredient.value %> <%= ingredient.unit %></li>
-  <% end %>
-  </ul>
+    <div class="recipe-show-picture">
+      <% if @recipe.image.attached? %>
+        <%= image_tag @recipe.image, class: "recipe-show-image" %>
+      <% end %>
+    </div>
+    <div class="recipe-show-headspacer">
+    </div>
+  </div>
 
-  <h2>Method</h2>
-  <ol>
-  <% @steps.each do |step| %>
-    <li><%= step.description %></li>
-  <% end %>
-  </ol>
-</div>
+  <div class="recipe-show-split-header">
+    <p><%= @recipe.description %></p>
+  </div>
+
+  <div class="recipe-show-body">
+    <div class="recipe-show-ingredients">
+      <ul>
+        <% @ingredients.each do |ingredient| %>
+          <li><%= ingredient.name %> - <%= ingredient.value %> <%= ingredient.unit %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="recipe-show-method">
+      <ol>
+        <% @steps.each do |step| %>
+          <li><%= step.description %></li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
 
   <h3>Comments</h3>
   <%= form_tag '/comments', method: 'post', class: "new-comment-form" do %>
@@ -49,4 +67,5 @@
         <%= comment.comment %>
       </div>
     </div>
-  <% end %>
+    <% end %>
+</div>
