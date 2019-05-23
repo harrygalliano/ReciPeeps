@@ -14,7 +14,6 @@ feature "See a users recipes", js: true   do
 
   scenario "Recipe owner name filters index by that user (index page)" do
     create_recipe
-    click_link "Log out"
     sign_up_2
     log_in_2
     create_recipe
@@ -33,7 +32,6 @@ feature "See a users recipes", js: true   do
 
   scenario "Recipe owner name filters index by that user (recipe page)" do
     create_recipe
-    click_link "Log out"
     sign_up_2
     log_in_2
     create_recipe_2

@@ -28,17 +28,17 @@ class RecipesController < ApplicationController
 
   def filter
     search_term = params[:search_bar_input].downcase
-    ingredients = Ingredient.where("lower(name) = ?", search_term)
+    ingredients = Ingredient.where("lower(name) LIKE ?", "%#{search_term}%")
     recipe_ids = ingredients.map do |ingredient|
       ingredient.recipe_id
     end
-    @recipes = Recipe.where(id: recipe_ids).paginate(page: params[:page], per_page: 10)
+    @recipes = Recipe.where(id: recipe_ids).paginate(page: params[:page], per_page: 12)
     @filter_message = "Filtered by ingredient: #{search_term}"
     render "index"
   end
 
   def user_filter
-    @recipes = Recipe.where(user_id: params[:user_id]).paginate(page: params[:page], per_page: 10)
+    @recipes = Recipe.where(user_id: params[:user_id]).paginate(page: params[:page], per_page: 12)
     @filter_message = "Filtered by user: #{User.find(params[:user_id]).name}"
     render "index"
   end
@@ -52,7 +52,7 @@ class RecipesController < ApplicationController
   end
 
   def index
-    @recipes = Recipe.paginate(page: params[:page], per_page: 10).order("likes_count DESC")
+    @recipes = Recipe.paginate(page: params[:page], per_page: 12).order("likes_count DESC")
   end
 
 end
