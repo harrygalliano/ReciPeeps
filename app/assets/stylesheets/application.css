@@ -99,13 +99,13 @@ body {
 
 .recipe-card-liked-button:hover {
   background: #21fffb;
-  box-shadow: 0px 5px 30px 1px #17bebb;
+  box-shadow: 1px 5px 30px 1px #17bebb;
   transition: 250ms;
 }
 
 .recipe-card-unliked-button:hover {
   background: #00eb62;
-  box-shadow: 0px 5px 30px 1px #00c954;
+  box-shadow: 1px 5px 30px 1px #00c954;
   transition: 250ms;
 }
 
@@ -115,6 +115,17 @@ body {
   font-weight: normal;
   letter-spacing: 0.1em;
   margin: 5px 30px;
+}
+
+.recipe-card-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-card-title-container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .fa-clock-o {
@@ -131,7 +142,7 @@ body {
   white-space: wrap; 
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 100px;
+  height: 80px;
 }
 
 .recipe-card-cook-btn {
