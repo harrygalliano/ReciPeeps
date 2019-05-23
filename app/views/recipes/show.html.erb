@@ -65,22 +65,22 @@
 </div>
 <div class="recipe-show-comments">
 
-  <h3>Comments</h3>
+  <h3 class="recipe-show-comments-head">Comments</h3>
   <%= form_tag '/comments', method: 'post', class: "new-comment-form" do %>
     <%= hidden_field_tag :recipe_id, @recipe.id %>
-    Add Comment
-    <%= text_field_tag :comment %>
-    <%= submit_tag "Submit" %>
+    <%= text_field_tag :comment, "Add a comment", class: "recipe-show-commentfield" %>
+    <%= submit_tag "Submit", class: "recipe-show-submittag" %>
   <% end %>
 
   <% @comments.each do |comment| %>
-    <div class="comment">
-      <div class="comment_name">
+    <div class="recipe-show-comment-box">
+      <div class="recipe-show-comment_name">
         <%= User.find(comment.user_id).name %>: <%= comment.created_at.localtime.strftime("%d/%m/%Y %H:%M") %>
       </div>
-      <div class="comment_body">
+      <div class="recipe-show-comment_body">
         <%= comment.comment %>
       </div>
     </div>
     <% end %>
 </div>
+<div class="recipe-show-footer"></div>

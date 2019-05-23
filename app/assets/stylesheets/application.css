@@ -355,3 +355,60 @@ body {
   margin-bottom: 10px;
   font-weight: bolder;
 }
+
+.recipe-show-comments {
+  width: 100%;
+}
+
+.recipe-show-comments-head {
+  color: rgba(0, 44, 73, 0.5);
+  font-size: 80px;
+  height: 180px;
+  padding-top: 40px;
+  padding-left: 100px;
+}
+.recipe-show-submittag {
+  height: 40px;
+  background-color: rgb(128, 214, 240);
+  border: none;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.recipe-show-commentfield {
+  width: 200px;
+  top: -30px;
+}
+
+.recipe-show-commentfield {
+  margin-left: 400px;
+  height: 40px;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.recipe-show-comment-box {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  width: 600px;
+  border-radius: 20px;;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.recipe-show-comment_name {
+  color: black;
+  letter-spacing: 3px;
+  margin-left: 50px;
+  font-size: 30px;
+  border-bottom: 1px solid;
+}
+.recipe-show-comment_body {
+  margin-left: 20px;
+  letter-spacing: 3px;
+}
+
+.recipe-show-footer {
+  height: 200px;
+}
