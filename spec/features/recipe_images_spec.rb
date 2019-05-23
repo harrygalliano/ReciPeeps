@@ -28,6 +28,6 @@ feature "Recipes have images" do
     click_button "Submit"
     fill_in "steps_1[description]", with: "test description"
     click_button "Submit"
-    expect(page.html).to include '<img class="recipe_image_show"'
+    expect(page.html).to include '<img class="recipe-show-image"'
   end
 end

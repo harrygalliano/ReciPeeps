@@ -46,8 +46,9 @@
             <% else %>
               <p><%= recipe.likes_count %> Likes </p>
             <% end %>
-
-          <p class="recipe-card-description"><%= recipe.description %></p>
+        <div class="recipe-card-description">
+          <p><%= recipe.description %></p>
+        </div>
         </div>
         <a href="/recipes/<%= recipe.id %>" class="recipe-card-cook-btn">Let's Cook!</a>
       </div>
