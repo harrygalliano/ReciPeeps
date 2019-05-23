@@ -12,7 +12,7 @@ feature "see recipes displayed on index" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name 2"
     fill_in "recipe_description", with: "Test recipe description 2"
-    click_button "Create"
+    click_button "Submit Recipe"
     fill_in "ingredients_1[name]", with: "ingredient name 2"
     fill_in "ingredients_1[value]", with: 200
     fill_in "ingredients_1[unit]", with: "oz"
