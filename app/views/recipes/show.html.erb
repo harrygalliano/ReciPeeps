@@ -15,19 +15,40 @@
     </div>
 
     <div class="recipe-show-icons">
+
+      <% pre_favourite = @recipe.favourites.find { |favourite| favourite.user_id == current_user.id} %>
+        <% if pre_favourite %>
+          <div class="recipe-show-icons-blocks">
+
+            <div class="recipe-show-icons-blowup">
+              <i class="fas fa-minus-circle"></i>
+            </div>
+          <%= button_to 'Unfavourite', recipe_favourite_path(@recipe, pre_favourite), method: :delete, class: "recipe-show-fav" %>
+          </div>
+        <% else %>
+          <div class="recipe-show-icons-blocks">
+
+            <div class="recipe-show-icons-blowup">
+              <i class="fas fa-plus-circle"></i>
+            </div>
+          <%= button_to 'Favourite', recipe_favourites_path(@recipe), method: :post, class: "recipe-show-fav" %>
+          </div>
+        <% end %>
+
+
       <div class="recipe-show-icons-blocks">
 
         <div class="recipe-show-icons-blowup">
           <i class="fas fa-clock"></i>
         </div>
-        <p id="recipe-show-icons-time">15 mins<p>
+        <p id="recipe-show-icons-time">Cooking Time: <%= @recipe.cooking_time %><p>
           
         </div>
       <div class="recipe-show-icons-blocks">
         <div class="recipe-show-icons-blowup">
           <i class="fas fa-utensils"></i>
         </div>
-        <p id="recipe-show-icons-serving">2 servings<p>
+        <p id="recipe-show-icons-serving"> Serves <%= @recipe.serving %><p>
       </div>
       <div class="recipe-show-icons-blocks">
         <div class="recipe-show-icons-blowup">

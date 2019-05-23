@@ -412,3 +412,12 @@ body {
 .recipe-show-footer {
   height: 200px;
 }
+
+.recipe-show-fav {
+  position: absolute;
+  top: 270px;
+  color: white;
+  font-weight: bolder;
+  border: none;
+  background: none;
+}
