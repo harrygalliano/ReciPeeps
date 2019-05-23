@@ -27,9 +27,9 @@
           <div class="navbar-right">
             <% if logged_in? %>
               <span class="border-bottom p-3"><%= link_to "Profile", '/users/find', id: 'profile_nav' %></span>
+              <span class="border-bottom p-3"><%= link_to "My Cookbook", '/mycookbook', id: 'my_cookbook_nav', method: :get %></span>
               <span class="border-bottom p-3"><%= link_to "New recipe", '/recipes/new', id: 'new_recipe_nav', method: :get %></span>
               <span class="border-bottom p-3"><%= link_to "Log out", logout_path, id: 'log_out_nav', method: :delete %></span>
-              <span class="border-bottom p-3"><%= link_to "My Cookbook", '/mycookbook', id: 'my_cookbook_nav', method: :get %></span>
             <% else %>
               <span class="border-bottom p-2"><%= link_to "Log in", '/login', id: 'log_in_nav' %></span>
             <% end %>
