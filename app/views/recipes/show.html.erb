@@ -1,71 +1,65 @@
 <div class="recipe-show-container">
-
-  <div class="recipe-show-firstrow">
-
-    <div class="recipe-show-details">
-      <div class="recipe-show-title">
-        <h1 class="recipe-show-title"><%= @recipe.name %></h1>
-      </div>
-      <div class="recipe-show-details-icons">
-        <div class="recipe-show-icons">
-          <i class="fas fa-clock">  15 mins</i>
-        </div>
-        <div class="recipe-show-icons">
-          <i class="fas fa-utensils">  2 servings</i>
-        </div>
-        <div class="recipe-show-person">
-          <i class="fas fa-user-edit">  <a id="user_filter_link" href="/recipes/<%= User.find(@recipe.user_id).id %>/filter"><%= User.find(@recipe.user_id).name %></a></i>
-        </div>
-      </div>
-    </div>
-
-    <div class="recipe-show-picture">
+  <div class="recipe-show-backgroundblur">
       <% if @recipe.image.attached? %>
         <%= image_tag @recipe.image, class: "recipe-show-image" %>
       <% end %>
-    </div>
-    <div class="recipe-show-headspacer">
-    </div>
-  </div>
-
-  <div class="recipe-show-split-header">
-    <p><%= @recipe.description %></p>
   </div>
 
   <div class="recipe-show-body">
-    <div class="recipe-show-ingredients">
-      <ul>
-        <% @ingredients.each do |ingredient| %>
-          <li><%= ingredient.name %> - <%= ingredient.value %> <%= ingredient.unit %></li>
-        <% end %>
+    <div class="recipe-show-title">
+      <h1 class="recipe-show-title"><%= @recipe.name %></h1>
+    </div>
+    
+    <div class="recipe-show-body-description">
+      <p><%= @recipe.description %></p>
+    </div>
+
+    <div class="recipe-show-icons">
+      <div class="recipe-show-icons-blocks">
+
+        <div class="recipe-show-icons-blowup">
+          <i class="fas fa-clock"></i>
+        </div>
+        <p id="recipe-show-icons-time">15 mins<p>
+          
+        </div>
+      <div class="recipe-show-icons-blocks">
+        <div class="recipe-show-icons-blowup">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <p id="recipe-show-icons-serving">2 servings<p>
+      </div>
+      <div class="recipe-show-icons-blocks">
+        <div class="recipe-show-icons-blowup">
+          <i class="fas fa-user-edit"></i>
+        </div>
+        <a id="user_filter_link" href="/recipes/<%= User.find(@recipe.user_id).id %>/filter"><%= User.find(@recipe.user_id).name %></a>
+      </div>
+    </div>
+    <div class="recipe-show-main">
+
+      <div class="recipe-show-ingredients">
+        <p class="recipe-show-text-heading">Ingredients</p>
+        <ul>
+          <% @ingredients.each do |ingredient| %>
+            <li id="recipe-show-list"><%= ingredient.name %> - <%= ingredient.value %> <%= ingredient.unit %></li>
+          <% end %>
       </ul>
-    </div>
 
-    <div class="recipe-show-method">
-      <ol>
-        <% @steps.each do |step| %>
-          <li><%= step.description %></li>
-        <% end %>
+      </div>
+
+      <div class="recipe-show-method">
+        <p class="recipe-show-text-heading">Method</p>
+
+        <ol>
+          <% @steps.each do |step| %>
+            <li id="recipe-show-list"><%= step.description %></li>
+          <% end %>
       </ol>
+
+      </div>
+
     </div>
+
   </div>
-
-  <h3>Comments</h3>
-  <%= form_tag '/comments', method: 'post', class: "new-comment-form" do %>
-    <%= hidden_field_tag :recipe_id, @recipe.id %>
-    Add Comment
-    <%= text_field_tag :comment %>
-    <%= submit_tag "Submit" %>
-  <% end %>
-
-  <% @comments.each do |comment| %>
-    <div class="comment">
-      <div class="comment_name">
-        <%= User.find(comment.user_id).name %>: <%= comment.created_at.localtime.strftime("%d/%m/%Y %H:%M") %>
-      </div>
-      <div class="comment_body">
-        <%= comment.comment %>
-      </div>
-    </div>
-    <% end %>
 </div>

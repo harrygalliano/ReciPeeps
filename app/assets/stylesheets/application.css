@@ -14,7 +14,7 @@
  *= require_self
  */
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
-@import url(https://fonts.googleapis.com/css?family=Kurale&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montaga&display=swap);
 
 body {
   padding: 0;
@@ -127,7 +127,10 @@ body {
 
 .recipe-card-description {
   margin: 10px 30px;
+  white-space: wrap; 
+  overflow: hidden;
   text-overflow: ellipsis;
+  height: 100px;
 }
 
 .recipe-card-cook-btn {
@@ -218,74 +221,115 @@ body {
 }
 
 .recipe-show-container {
-  border-style: solid;
-  border-color: rgb(187, 229, 245);
-  width: 60%;
-  margin-left: 15%;
-  border-radius: 0px 140px 0px 0px;
-  -webkit-border-radius: 0px 140px 0px 0px;
-  -moz-border-radius: 0px 140px 0px 0px;
-  -ms-border-radius: 0px 140px 0px 0px;
-  -o-border-radius: 0px 140px 0px 0px;
-}
-
-.recipe-show-firstrow {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.recipe-show-details {
-
-}
-
-.recipe-show-details-description {
-  font-size: 25px;
-  margin-top: 30px;
-}
-
-.recipe-show-details-icons {
-  display: flex;
-  justify-content: space-between;
-  height: 120px;
-  width: 400px;
-}
-
-.recipe-show-icons {
-  font-size: 20px;
-  align-self: flex-end;
+  margin: 0 auto;
+  width: 70%;
+  height: 600px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .recipe-show-image {
-  width:300px;
-  height:300px;
-  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  border-radius: 30px;
+  width:100%;
+  height:100%;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.recipe-show-body{
   position: absolute;
-  right: 25%;
-}
-
-.recipe-show-person {
-  font-size: 20px;
-  margin-top: 90px;
-}
-
-.recipe-show-split-header {
-  width: 70%;
-  height: 150px;
-  border-top: 2px solid rgb(107, 175, 195);
-  font-size: 20px;
+  margin: 30px;
+  width: 65%;
+  top: 150px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .recipe-show-title {
-  font-family: 'Kurale', serif;
+  font-family: 'Montaga', serif;
   font-size: 60px;
   margin-top: 40px;
-  margin-left: 10px;
-  font-weight: bold;
+  margin-left: 40px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: wrap;
 }
 
-.recipe-show-body {
-  display: flex;
-  justify-content: space-between;
-  width: 400px;
+.recipe-show-body-description {
+  margin-left: 150px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid;
+  font-weight: bold;
+  height: 130px;
+}
 
+.recipe-show-icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.recipe-show-icons-blocks {
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+}
+
+.recipe-show-icons-blowup {
+  font-size: 60px;
+  color: rgba(127, 192, 246, 0.4);
+  margin-left: 15px;
+  margin-top: 10px;
+}
+#recipe-show-icons-time {
+  position: absolute;
+  top: 270px;
+  color: white;
+  font-weight: bolder;
+}
+
+#recipe-show-icons-serving {
+  position: absolute;
+  top: 270px;
+  color: white;
+  font-weight: bolder;
+}
+
+#user_filter_link {
+  position: absolute;
+  top: 270px;
+  color: white;
+  font-weight: bolder;
+}
+
+.recipe-show-main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.recipe-show-text-heading {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+#recipe-show-list {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bolder;
 }
