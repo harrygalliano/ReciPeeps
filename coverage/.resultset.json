@@ -2,6 +2,7 @@
   "RSpec": {
     "coverage": {
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/comments_controller.rb": [
+
         null,
         null,
         1,
@@ -12,6 +13,7 @@
         null,
         null
       ],
+
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/controllers/favourites_controller.rb": [
         null,
         null,
@@ -340,6 +342,7 @@
         null
       ],
       "/Users/vi1551/Makers/month_3/Final_Project/ReciPeeps/app/models/like.rb": [
+
         null,
         null,
         1,

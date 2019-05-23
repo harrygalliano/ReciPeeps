@@ -10,25 +10,29 @@
 
 <div class="recipe-card-container">
   <% @recipes.each do |recipe| %>
-    <div id="recipe_<%= recipe.id %>" class="recipe-card-individual">
+
+    <div class="recipe-card-individual">
 
       <div class="recipe-card">
         <div class="recipe-card-header">
+
               <% if recipe.image.attached? %>
                 <%= image_tag recipe.image, class: "recipe_image_index", :size => "400x350" %>
               <% end %>
+
               <% if logged_in? %>
                 <% pre_like = recipe.likes.find { |like| like.user_id == current_user.id} %>
+                
                 <% if pre_like %>
-
-                  <%= link_to raw("<i class=\"fas fa-heart\"></i>"), recipe_like_path(recipe, pre_like), method: :delete, class: "recipe-card-liked-button" %>
+                  <%= link_to raw("<i class=\'fas fa-heart\'></i>"), recipe_like_path(recipe, pre_like), method: :delete, class: "recipe-card-liked-button" %>
+              
                 <% else %>
-                  <%= link_to raw("<i class=\"fas fa-plus\"></i>"), recipe_likes_path(recipe), method: :post, class: "recipe-card-unliked-button" %>
+                  <%= link_to raw("<i class=\'fas fa-plus\'></i>"), recipe_likes_path(recipe), method: :post, class: "recipe-card-unliked-button" %>
+
                 <% end %>
               <% end %>
             </div>
         </div>
-        <div class="recipe">
         <div class="recipe-card-title">
             <h1 class="recipe-card-title-container">
               <a><%= recipe.name %></a>
@@ -43,22 +47,12 @@
               <p><%= recipe.likes_count %> Likes </p>
             <% end %>
 
-            <div class="recipe-card-rating">
-              <li>
-                  <a href="#"><i class="fas fa-star"></i></a>
-                  <a href="#"><i class="fas fa-star"></i></a>
-                  <a href="#"><i class="fas fa-star"></i></a>
-                  <a href="#"><i class="fas fa-star"></i></a>
-                  <a href="#"><i class="far fa-star"></i></a>
-              </li>
-            </div>
           <p class="recipe-card-description"><%= recipe.description %></p>
         </div>
         <a href="/recipes/<%= recipe.id %>" class="recipe-card-cook-btn">Let's Cook!</a>
       </div>
   <% end %>
   </div>
-</div>
 
 <div class="pagination_box">
 
