@@ -52,7 +52,7 @@ group :development, :test do
   gem "selenium-webdriver"
   gem "simplecov", require: false
   gem "simplecov-console", require: false
-  gem "webdrivers"
+  gem 'webdrivers', '~> 3.2'
 end
 
 group :development do

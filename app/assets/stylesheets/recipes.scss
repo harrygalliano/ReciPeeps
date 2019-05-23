@@ -136,11 +136,8 @@
     font-weight: bold;
 }
 
-.new-recipe-container {
-}
-
 .new-recipe-full {
-  width: 100%;
+  width: 95%;
   border-style: solid;
   border-color: #b92222;
   padding: 20px;
@@ -163,8 +160,12 @@
   padding: 20px;
 }
 
-.form-group {
+.form-group-recipe {
   width: 50%;
+}
+
+.form-group-step {
+  width: 80%;
 }
 
 .upload-field {
@@ -175,6 +176,10 @@
 .new-recipe-label {
   font-size: 20px;
   font-weight: 500;
+}
+
+.new-ingredient-input {
+  float: right;
 }
 
 .new-ingredient-label {
@@ -192,9 +197,9 @@
   margin-top: 35px;
 }
 
-// div[id*='ingredient_'] {
-//   margin-bottom: 5px;
-// }
+div[id*='ingredient_'] {
+  margin-bottom: 5px;
+}
 
 .add-subtract-inputs form {
   padding: 10px;

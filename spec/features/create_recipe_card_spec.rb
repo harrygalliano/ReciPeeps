@@ -10,7 +10,9 @@ feature "Create recipe card" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    fill_in "recipe_cooking_time", with: "01:30"
+    fill_in "recipe_serving", with: 4
+    click_button "Submit Recipe"
     expect(page).to have_content "Add Ingredients"
   end
 
@@ -18,7 +20,9 @@ feature "Create recipe card" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    fill_in "recipe_cooking_time", with: "01:30"
+    fill_in "recipe_serving", with: 4
+    click_button "Submit Recipe"
 
     fill_in "ingredients_1[name]", with: "test name"
     fill_in "ingredients_1[value]", with: 1
@@ -31,7 +35,9 @@ feature "Create recipe card" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    fill_in "recipe_cooking_time", with: "01:30"
+    fill_in "recipe_serving", with: 4
+    click_button "Submit Recipe"
     fill_in "ingredients_1[name]", with: "test name"
     fill_in "ingredients_1[value]", with: 1
     fill_in "ingredients_1[unit]", with: "g"
@@ -46,7 +52,9 @@ feature "Create recipe card" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    fill_in "recipe_cooking_time", with: "01:30"
+    fill_in "recipe_serving", with: 4
+    click_button "Submit Recipe"
     fill_in "ingredients_1[name]", with: "ingredient name"
     fill_in "ingredients_1[value]", with: 100
     fill_in "ingredients_1[unit]", with: "g"

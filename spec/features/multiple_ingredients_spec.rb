@@ -10,7 +10,7 @@ feature "Create recipe card with multiple ingredients" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    click_button "Submit Recipe"
 
     click_button "More Ingredients"
 
@@ -28,7 +28,7 @@ feature "Create recipe card with multiple ingredients" do
     visit "/recipes/new"
     fill_in "recipe_name", with: "Test recipe name"
     fill_in "recipe_description", with: "Test recipe description"
-    click_button "Create"
+    click_button "Submit Recipe"
 
     click_button "More Ingredients"
     click_button "More Ingredients"
@@ -42,7 +42,7 @@ feature "Create recipe card with multiple ingredients" do
     fill_in "ingredients_3[name]", with: "test name 3"
     fill_in "ingredients_3[value]", with: 3
     fill_in "ingredients_3[unit]", with: "g"
-    click_button "Less Ingredients "
+    click_button "Fewer Ingredients"
     expect { page.find(:css, "#ingredients_2_name") }.to_not raise_error(Capybara::ElementNotFound, 'Unable to find css "#ingredients_2_name"')
     expect { page.find(:css, "#ingredients_3_name") }.to raise_error(Capybara::ElementNotFound, 'Unable to find css "#ingredients_3_name"')
   end
