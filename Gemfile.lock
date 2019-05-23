@@ -81,6 +81,9 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.2)
       xpath (~> 3.2)
+    capybara-selenium (0.0.6)
+      capybara
+      selenium-webdriver
     childprocess (1.0.1)
       rake (< 13.0)
     coffee-rails (4.2.2)
@@ -328,6 +331,7 @@ DEPENDENCIES
   bcrypt
   bootstrap-sass
   capybara (>= 2.15)
+  capybara-selenium
   coffee-rails (~> 4.2)
   coveralls
   dotenv-rails

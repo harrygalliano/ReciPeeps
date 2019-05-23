@@ -53,6 +53,7 @@ group :development, :test do
   gem "simplecov", require: false
   gem "simplecov-console", require: false
   gem 'webdrivers', '~> 3.2'
+  gem "capybara-selenium"
 end
 
 group :development do
