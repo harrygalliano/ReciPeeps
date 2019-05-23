@@ -1,49 +1,107 @@
-<h1><%= @recipe.name %></h1>
-<p><%= @recipe.description %></p>
-<p><a id="user_filter_link" href="/recipes/<%= User.find(@recipe.user_id).id %>/filter"><%= User.find(@recipe.user_id).name %></a> </p>
-
-<% pre_favourite = @recipe.favourites.find { |favourite| favourite.user_id == current_user.id} %>
-<% if pre_favourite %>
-  <%= button_to 'Unfavourite', recipe_favourite_path(@recipe, pre_favourite), method: :delete %>
-<% else %>
-  <%= button_to 'Favourite', recipe_favourites_path(@recipe), method: :post %>
-<% end %>
-
-<% if @recipe.image.attached? %>
-  <div class="recipe_image_container">
-    <%= image_tag @recipe.image, class: "recipe_image_show", height: '150' %>
+<div class="recipe-show-container">
+  <div class="recipe-show-backgroundblur">
+      <% if @recipe.image.attached? %>
+        <%= image_tag @recipe.image, class: "recipe-show-image" %>
+      <% end %>
   </div>
-<% end %>
 
-<h2>Ingredients</h2>
-<ul>
-<% @ingredients.each do |ingredient| %>
-  <li><%= ingredient.name %> - <%= ingredient.value %> <%= ingredient.unit %></li>
-<% end %>
-</ul>
-
-<h2>Method</h2>
-<ol>
-<% @steps.each do |step| %>
-  <li><%= step.description %></li>
-<% end %>
-</ol>
-
-<h3>Comments</h3>
-<%= form_tag '/comments', method: 'post', class: "new-comment-form" do %>
-  <%= hidden_field_tag :recipe_id, @recipe.id %>
-  Add Comment
-  <%= text_field_tag :comment %>
-  <%= submit_tag "Submit" %>
-<% end %>
-
-<% @comments.each do |comment| %>
-  <div class="comment">
-    <div class="comment_name">
-      <%= User.find(comment.user_id).name %>: <%= comment.created_at.localtime.strftime("%d/%m/%Y %H:%M") %>
+  <div class="recipe-show-body">
+    <div class="recipe-show-title">
+      <h1 class="recipe-show-title"><%= @recipe.name %></h1>
     </div>
-    <div class="comment_body">
-      <%= comment.comment %>
+    
+    <div class="recipe-show-body-description">
+      <p><%= @recipe.description %></p>
     </div>
+
+    <div class="recipe-show-icons">
+
+      <% pre_favourite = @recipe.favourites.find { |favourite| favourite.user_id == current_user.id} %>
+        <% if pre_favourite %>
+          <div class="recipe-show-icons-blocks">
+
+            <div class="recipe-show-icons-blowup">
+              <i class="fas fa-minus-circle"></i>
+            </div>
+          <%= button_to 'Unfavourite', recipe_favourite_path(@recipe, pre_favourite), method: :delete, class: "recipe-show-fav" %>
+          </div>
+        <% else %>
+          <div class="recipe-show-icons-blocks">
+
+            <div class="recipe-show-icons-blowup">
+              <i class="fas fa-plus-circle"></i>
+            </div>
+          <%= button_to 'Favourite', recipe_favourites_path(@recipe), method: :post, class: "recipe-show-fav" %>
+          </div>
+        <% end %>
+
+
+      <div class="recipe-show-icons-blocks">
+
+        <div class="recipe-show-icons-blowup">
+          <i class="fas fa-clock"></i>
+        </div>
+        <p id="recipe-show-icons-time">Cooking Time: <%= @recipe.cooking_time %><p>
+          
+        </div>
+      <div class="recipe-show-icons-blocks">
+        <div class="recipe-show-icons-blowup">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <p id="recipe-show-icons-serving"> Serves <%= @recipe.serving %><p>
+      </div>
+      <div class="recipe-show-icons-blocks">
+        <div class="recipe-show-icons-blowup">
+          <i class="fas fa-user-edit"></i>
+        </div>
+        <a id="user_filter_link" href="/recipes/<%= User.find(@recipe.user_id).id %>/filter"><%= User.find(@recipe.user_id).name %></a>
+      </div>
+    </div>
+    <div class="recipe-show-main">
+
+      <div class="recipe-show-ingredients">
+        <p class="recipe-show-text-heading">Ingredients</p>
+        <ul>
+          <% @ingredients.each do |ingredient| %>
+            <li id="recipe-show-list"><%= ingredient.name %> - <%= ingredient.value %> <%= ingredient.unit %></li>
+          <% end %>
+      </ul>
+
+      </div>
+
+      <div class="recipe-show-method">
+        <p class="recipe-show-text-heading">Method</p>
+
+        <ol>
+          <% @steps.each do |step| %>
+            <li id="recipe-show-list"><%= step.description %></li>
+          <% end %>
+      </ol>
+
+      </div>
+
+    </div>
+
   </div>
-<% end %>
+</div>
+<div class="recipe-show-comments">
+
+  <h3 class="recipe-show-comments-head">Comments</h3>
+  <%= form_tag '/comments', method: 'post', class: "new-comment-form" do %>
+    <%= hidden_field_tag :recipe_id, @recipe.id %>
+    <%= text_field_tag :comment, "Add a comment", class: "recipe-show-commentfield" %>
+    <%= submit_tag "Submit", class: "recipe-show-submittag" %>
+  <% end %>
+
+  <% @comments.each do |comment| %>
+    <div class="recipe-show-comment-box">
+      <div class="recipe-show-comment_name">
+        <%= User.find(comment.user_id).name %>: <%= comment.created_at.localtime.strftime("%d/%m/%Y %H:%M") %>
+      </div>
+      <div class="recipe-show-comment_body">
+        <%= comment.comment %>
+      </div>
+    </div>
+    <% end %>
+</div>
+<div class="recipe-show-footer"></div>

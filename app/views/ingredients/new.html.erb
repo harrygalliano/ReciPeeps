@@ -31,3 +31,10 @@
 <form action="index.html" method="post" id='add_ingredient_form'>
   <input type="button" id="remove_ingredient_button" value="Less Ingredients ">
 </form>
+
+<% unless flash[:ocr_text].nil? %>
+  <% flash.keep(:ocr_text) %>
+  <div class="ocr_output">
+    <%= simple_format(flash[:ocr_text]) %>
+  </div>
+<% end %>

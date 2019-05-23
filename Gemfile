@@ -33,7 +33,9 @@ gem "jbuilder", "~> 2.5"
 gem "jquery-ui-rails"
 gem "jquery-rails"
 gem "rails-ujs", "~> 0.1.0"
+gem 'rest-client'
 gem "webpacker"
+gem 'dotenv-rails'
 
 gem "will_paginate", "~> 3.1.1"
 gem "rubocop-rails_config"
