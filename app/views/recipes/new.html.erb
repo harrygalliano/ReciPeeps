@@ -12,7 +12,6 @@
         </div>
       </div>
     <% end %>
-
     <h1 class='new-recipe-title'>Create your recipe!</h1>
     <div id='new-recipe-form' class="row justify-content-center align-items-center">
       <%= form_for @recipe, url: {action: "create"}, html: {class: "form-group form-group-recipe"} do |f| %>
@@ -22,7 +21,7 @@
         <%= f.text_area :description, class: 'form-control' %>
         <%= label_tag(:cooking_time, "Cooking time", class: 'new-recipe-label') %>
         <%= f.time_field :cooking_time, class: 'form-control' %>
-        <%= label_tag(:serving, "Serving suggestion", class: 'new-recipe-label') %>
+        <%= label_tag(:serving, "Portions", class: 'new-recipe-label') %>
         <%= f.number_field :serving, min: 1, step: 1, class: 'form-control' %>
         <%= label_tag(:image, "Recipe picture", class: 'new-recipe-label') %>
         <%= f.file_field :image, class: 'form-control upload-field' %>
