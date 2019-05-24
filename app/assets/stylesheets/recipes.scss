@@ -195,6 +195,12 @@
   margin: 30px
 }
 
+.recipe_image_index {
+  object-fit: cover;
+  height:100%;
+  width: 100%;
+}
+
 
 #ocr-upload-form {
   margin-top: 35px;
