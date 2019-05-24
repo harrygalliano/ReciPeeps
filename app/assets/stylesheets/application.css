@@ -436,12 +436,6 @@ body {
   font-size: 25px;
 }
 
-.edit-profile-box {
-  background-color: rgba(187, 187, 187, 0.287);
-  border-radius: 0px 150px 0px 0px;
-  width: 800px;
-}
-
 .edit-profile-container {
   margin-left: 50px;
 }
