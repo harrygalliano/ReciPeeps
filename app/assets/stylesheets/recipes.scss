@@ -111,7 +111,7 @@
 
 .new-recipe-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -138,26 +138,28 @@
 
 .new-recipe-full {
   width: 95%;
-  border-style: solid;
-  border-color: #b92222;
   padding: 20px;
   text-align: center;
+  background-color: lightblue;
 }
 
 .new-recipe-left {
   width: 48%;
   text-align: center;
-  border-style: solid;
-  border-color: #b92222;
+  margin: 5px;
+  margin-top: 30px;
+  background-color: lightblue;
 }
 
 .new-recipe-right {
   width: 48%;
-  height: 100%;
   text-align: center;
-  border-style: solid;
-  border-color: #b92222;
   padding: 20px;
+  margin: 5px;
+  margin-top: 30px;
+  background-color: salmon;
+  color: white;
+  font-weight: bolder;
 }
 
 .form-group-recipe {

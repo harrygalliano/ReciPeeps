@@ -21,7 +21,7 @@ body {
   font-family: Raleway, sans-serif;
   list-style-type: none;
   text-decoration: none;
-  
+
 }
 
 .navbar {
@@ -144,7 +144,7 @@ body {
 
 .recipe-card-description {
   margin: 10px 30px;
-  white-space: wrap; 
+  white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 80px;
@@ -216,27 +216,6 @@ body {
   width: 200px;
 }
 
-.new-recipe-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.new-recipe-left {
-  width: 50%;
-  text-align: center;
-  border-style: solid;
-  border-color: #b92222;
-}
-
-.new-recipe-right {
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  border-style: solid;
-  border-color: #9b9b9b;
-}
-
 .recipe-show-container {
   margin: 0 auto;
   width: 70%;
@@ -280,17 +259,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fafafa00; 
+  background: #fafafa00;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(117, 117, 117, 0.5); 
+  background: rgba(117, 117, 117, 0.5);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(200, 231, 248); 
+  background: rgb(200, 231, 248);
 }
 
 .recipe-show-title {
