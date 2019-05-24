@@ -9,7 +9,7 @@
     <div class="recipe-show-title">
       <h1 class="recipe-show-title"><%= @recipe.name %></h1>
     </div>
-    
+
     <div class="recipe-show-body-description">
       <p><%= @recipe.description %></p>
     </div>
@@ -42,14 +42,16 @@
           <i class="fas fa-clock"></i>
         </div>
         <p id="recipe-show-icons-time">Cooking Time: <%= @recipe.cooking_time %><p>
-          
+
         </div>
       <div class="recipe-show-icons-blocks">
         <div class="recipe-show-icons-blowup">
           <i class="fas fa-utensils"></i>
         </div>
-        <p id="recipe-show-icons-serving"> Serves <%= @recipe.serving %><p>
+        <p id="recipe-show-icons-serving"> Serves <span id='serving-num'><%= @recipe.serving %></span><p>
       </div>
+      <button type="button" id='plus-serving'>+</button>
+      <button type="button" id='minus-serving'>-</button>
       <div class="recipe-show-icons-blocks">
         <div class="recipe-show-icons-blowup">
           <i class="fas fa-user-edit"></i>
@@ -63,7 +65,7 @@
         <p class="recipe-show-text-heading">Ingredients</p>
         <ul>
           <% @ingredients.each do |ingredient| %>
-            <li id="recipe-show-list"><%= ingredient.name %> - <%= ingredient.value %> <%= ingredient.unit %></li>
+            <li id="recipe-show-list"><%= ingredient.name %> - <span class='ingredient-value'><%= ingredient.value %></span> <%= ingredient.unit %></li>
           <% end %>
       </ul>
 
