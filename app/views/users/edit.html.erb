@@ -2,32 +2,36 @@
 <% provide(:title, "Edit user") %>
 <h1>Update your profile</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
+<div class="edit-profile-container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :name, class: 'edit-profile-text' %>
+        <%= f.text_field :name, class: 'edit-profile-form' %>
+        <br><br>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :email, class: 'edit-profile-text' %>
+        <%= f.email_field :email, class: 'edit-profile-form' %>
+        <br><br>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :password, class: 'edit-profile-text' %>
+        <%= f.password_field :password, class: 'edit-profile-form' %>
+        <br><br>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.label :password_confirmation, "Confirmation", class: 'edit-profile-text' %>
+        <%= f.password_field :password_confirmation, class: 'edit-profile-form' %>
+        <br><br>
 
-      <%= f.label :description, "Tell us something about yourself..." %>
-      <%= f.text_field :description, class: 'form-control' %>
+        <%= f.label :description, "Tell us something about yourself...", class: 'edit-profile-text-describe' %>
+        <%= f.text_field :description, class: 'edit-profile-form-describe' %>
+        <br><br>
 
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
-    <% end %>
+        <%= f.submit "Save changes", class: "btn btn-primary" %>
+      <% end %>
 
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank">change</a>
     </div>
   </div>
 </div>
+<div class="recipe-show-footer"></div>

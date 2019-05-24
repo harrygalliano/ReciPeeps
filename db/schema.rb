@@ -77,8 +77,6 @@ ActiveRecord::Schema.define(version: 2019_05_23_230652) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
-    t.string "preparation_time"
-    t.integer "servings"
     t.integer "likes_count", default: 0
     t.integer "serving"
     t.string "cooking_time"
