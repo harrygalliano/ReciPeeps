@@ -13,27 +13,27 @@
       </div>
     <% end %>
     <h1 class='new-recipe-title'>Create your recipe!</h1>
-    <div id='new-recipe-form' class="row justify-content-center align-items-center">
-      <%= form_for @recipe, url: {action: "create"}, html: {class: "form-group form-group-recipe"} do |f| %>
-      <%= label_tag(:name, "Recipe title", class: 'new-recipe-label') %>
-        <%= f.text_field :name, class: 'form-control' %>
-        <%= label_tag(:description, "Recipe description", class: 'new-recipe-label') %>
-        <%= f.text_area :description, class: 'form-control' %>
-        <%= label_tag(:cooking_time, "Cooking time", class: 'new-recipe-label') %>
-        <%= f.time_field :cooking_time, class: 'form-control' %>
-        <%= label_tag(:serving, "Portions", class: 'new-recipe-label') %>
-        <%= f.number_field :serving, min: 1, step: 1, class: 'form-control' %>
-        <%= label_tag(:image, "Recipe picture", class: 'new-recipe-label') %>
-        <%= f.file_field :image, class: 'form-control upload-field' %>
+    <div id='new-recipe-form' class="row">
+      <%= form_for @recipe, url: {action: "create"}, html: {class: "form-group"} do |f| %>
+        <%= label_tag(:name, "Recipe title", class: "create-recipe-text") %>
+        <%= f.text_field :name, class: "edit-profile-form" %><br>
+        <%= label_tag(:description, "Recipe description", class: "create-recipe-text") %>
+        <%= f.text_area :description, class: "edit-profile-form" %><br>
+        <%= label_tag(:cooking_time, "Cooking time", class: "create-recipe-text") %>
+        <%= f.time_field :cooking_time, class: "edit-profile-form" %><br>
+        <%= label_tag(:serving, "Portions", class: "create-recipe-text") %>
+        <%= f.number_field :serving, min: 1, step: 1, class: "edit-profile-form" %><br><br>
+        <%= label_tag(:image, "Recipe picture", class: "create-recipe-text") %>
+        <%= f.file_field :image, class: "edit-profile-form" %><br><br>
         <%= f.submit "Submit Recipe", class: 'btn btn-primary' %>
       <% end %>
     </div>
 
-    <div id='ocr-upload-form' class="row justify-content-center align-items-center">
-      <%= form_tag("/ocr", method: "post", multipart: true, class: 'form-group form-group-recipe') do %>
-      <p>Copying in a recipe? You can upload a picture here and we'll convert it into text so you can copy and paste those detailed descriptions rather than writing them out by hand!</p>
-      <%= file_field_tag(:image, class: 'form-control upload-field') %>
-      <%= submit_tag("Upload", class: 'btn btn-secondary') %>
+    <div id='ocr-upload-form' class="row">
+      <%= form_tag("/ocr", method: "post", multipart: true, class: 'form-group') do %>
+      <p class="create-recipe-long-text">Copying in a recipe? You can upload a picture here and we'll convert it into text so you can copy and paste those detailed descriptions rather than writing them out by hand!</p>
+      <%= file_field_tag(:image, class: 'edit-profile-form') %>
+      <%= submit_tag("Upload", class: 'btn btn-secondary create-button') %>
       <% end %>
     </div>
   </div>
