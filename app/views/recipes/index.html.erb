@@ -17,15 +17,15 @@
         <div class="recipe-card-header">
 
               <% if recipe.image.attached? %>
-                <%= image_tag recipe.image, class: "recipe_image_index", :size => "400x350" %>
+                <%= image_tag recipe.image, class: "recipe_image_index" %>
               <% end %>
 
               <% if logged_in? %>
                 <% pre_like = recipe.likes.find { |like| like.user_id == current_user.id} %>
-                
+
                 <% if pre_like %>
                   <%= link_to raw("<i class=\'fas fa-heart\'></i>"), recipe_like_path(recipe, pre_like), method: :delete, class: "recipe-card-liked-button" %>
-              
+
                 <% else %>
                   <%= link_to raw("<i class=\'fas fa-plus\'></i>"), recipe_likes_path(recipe), method: :post, class: "recipe-card-unliked-button" %>
 
